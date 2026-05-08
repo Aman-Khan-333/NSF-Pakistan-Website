@@ -1,0 +1,1016 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Neuro Sciences Foundation — Mental Health Support in Pakistan</title>
+  <meta name="description" content="High-quality mental health treatment and primary care across Pakistan." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Source+Sans+3:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- ============================================================
+       SVG ICON SPRITE
+       ============================================================ -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <defs>
+      <symbol id="i-brain" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" d="M9 4.5A2.5 2.5 0 0 0 6.5 7v0A2.5 2.5 0 0 0 4 9.5v1a2.5 2.5 0 0 0 .5 1.5A2.5 2.5 0 0 0 4 13.5v1A2.5 2.5 0 0 0 6.5 17a2.5 2.5 0 0 0 2.5 2.5h.5V4.5H9zm6 0A2.5 2.5 0 0 1 17.5 7v0A2.5 2.5 0 0 1 20 9.5v1a2.5 2.5 0 0 1-.5 1.5 2.5 2.5 0 0 1 .5 1.5v1a2.5 2.5 0 0 1-2.5 2.5A2.5 2.5 0 0 1 15 19.5H14.5V4.5H15z"/></symbol>
+      <symbol id="i-stethoscope" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" d="M5 3v6a4 4 0 0 0 8 0V3M9 13v3a4 4 0 0 0 8 0v-1"/><circle cx="17" cy="11" r="2" fill="none" stroke="currentColor" stroke-width="1.7"/></symbol>
+      <symbol id="i-home" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" d="M3 11l9-8 9 8v10a1 1 0 0 1-1 1h-5v-7H10v7H4a1 1 0 0 1-1-1V11z"/></symbol>
+      <symbol id="i-people" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" d="M16 11a4 4 0 1 0-4-4 4 4 0 0 0 4 4zm-8 0a3 3 0 1 0-3-3 3 3 0 0 0 3 3zm0 2c-2.7 0-5 1.6-5 4v3h6v-3c0-1.5.6-2.8 1.6-3.7A8.2 8.2 0 0 0 8 13zm8 0c-3.3 0-6 1.8-6 4v3h12v-3c0-2.2-2.7-4-6-4z"/></symbol>
+      <symbol id="i-book" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" d="M4 4.5A2.5 2.5 0 0 1 6.5 2H20v17H6.5A2.5 2.5 0 0 0 4 21.5V4.5z"/><path fill="none" stroke="currentColor" stroke-width="1.7" d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/></symbol>
+      <symbol id="i-pill" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" d="M4.2 14.8 14.8 4.2a4.5 4.5 0 0 1 6.4 6.4L10.6 21.2a4.5 4.5 0 0 1-6.4-6.4z"/><path fill="none" stroke="currentColor" stroke-width="1.7" d="m9 9 6 6"/></symbol>
+      <symbol id="i-grid" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" d="M4 4h7v7H4zm9 0h7v7h-7zM4 13h7v7H4zm9 0h7v7h-7z"/></symbol>
+      <symbol id="i-puzzle" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" d="M14 4h-3v3a2 2 0 1 1-4 0V4H4v6h3a2 2 0 1 1 0 4H4v6h7v-3a2 2 0 1 1 4 0v3h6v-7h-3a2 2 0 1 1 0-4h3V4z"/></symbol>
+      <symbol id="i-heart" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" d="M12 21s-8-4.5-8-11.5A5.5 5.5 0 0 1 12 5a5.5 5.5 0 0 1 8 4.5C20 16.5 12 21 12 21z"/></symbol>
+      <symbol id="i-shield" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" d="M12 2 4 5v6c0 5 3.5 9 8 11 4.5-2 8-6 8-11V5l-8-3z"/></symbol>
+      <symbol id="i-mountain" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" d="M2 21l8-15 5 9 3-5 4 11z"/></symbol>
+      <symbol id="i-pin" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" d="M12 22s8-7 8-13a8 8 0 0 0-16 0c0 6 8 13 8 13z"/><circle cx="12" cy="9" r="2.5" fill="none" stroke="currentColor" stroke-width="1.7"/></symbol>
+      <symbol id="i-phone" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" d="M22 17v3a2 2 0 0 1-2.2 2 19 19 0 0 1-8.3-3 18.7 18.7 0 0 1-6-6A19 19 0 0 1 2.5 4.2 2 2 0 0 1 4.5 2H7a2 2 0 0 1 2 1.7c.1 1 .3 2 .6 3a2 2 0 0 1-.5 2L8 9.7a16 16 0 0 0 6 6l1-1a2 2 0 0 1 2.1-.5c1 .3 2 .5 3 .6A2 2 0 0 1 22 17z"/></symbol>
+      <symbol id="i-arrow" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M5 12h14m-6-7 7 7-7 7"/></symbol>
+      <symbol id="i-arrow-up-right" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M7 17 17 7M9 7h8v8"/></symbol>
+      <symbol id="i-fb" viewBox="0 0 24 24"><path fill="currentColor" d="M22 12a10 10 0 1 0-11.6 9.9V14.9H7.9V12h2.5V9.8c0-2.5 1.5-3.9 3.8-3.9 1.1 0 2.2.2 2.2.2v2.5h-1.3c-1.2 0-1.6.8-1.6 1.6V12h2.8l-.5 2.9h-2.3v7A10 10 0 0 0 22 12z"/></symbol>
+      <symbol id="i-ig" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="5" fill="none" stroke="currentColor" stroke-width="1.8"/><circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="1.8"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></symbol>
+      <symbol id="i-li" viewBox="0 0 24 24"><path fill="currentColor" d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14zM8.3 18.3v-8H5.7v8h2.6zM7 9.1a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3zm11.3 9.2v-4.4c0-2.4-1.3-3.5-3-3.5a2.6 2.6 0 0 0-2.4 1.3v-1.1H10.3v8h2.6v-4.4c0-1.2.6-1.9 1.6-1.9.9 0 1.4.6 1.4 1.9v4.4h2.4z"/></symbol>
+      <symbol id="i-logo" viewBox="0 0 40 40"><circle cx="20" cy="20" r="19" fill="#00C9A7"/><path fill="none" stroke="#fff" stroke-width="1.8" stroke-linecap="round" d="M14 13c0-2.2 1.8-4 4-4s4 1.8 4 4v14c0 2.2-1.8 4-4 4s-4-1.8-4-4"/><path fill="none" stroke="#fff" stroke-width="1.8" stroke-linecap="round" d="M26 13c0-2.2-1.8-4-4-4s-4 1.8-4 4v14c0 2.2 1.8 4 4 4s4-1.8 4-4"/><circle cx="14" cy="14" r="1.4" fill="#fff"/><circle cx="26" cy="14" r="1.4" fill="#fff"/><circle cx="14" cy="26" r="1.4" fill="#fff"/><circle cx="26" cy="26" r="1.4" fill="#fff"/></symbol>
+    </defs>
+  </svg>
+
+  <!-- ============================================================
+       HERO (with floating header inside)
+       ============================================================ -->
+  <section class="hero">
+  <header class="site-header">
+    <div class="container header__inner">
+      <a href="#" class="logo" aria-label="Neuro Sciences Foundation">
+        <img class="logo__img" src="Assets%20Home%20page/Logo.png" alt="Neuro Sciences Foundation" />
+      </a>
+
+      <nav class="main-nav" aria-label="Primary">
+        <ul>
+          <li><a href="#" class="is-active">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#our-work">Our Work</a></li>
+          <li><a href="#volunteer">Volunteer</a></li>
+          <li><a href="#stories">Stories</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+        <a href="#donate" class="btn btn--donate main-nav__cta">
+          Donate Now
+          <svg class="btn__icon"><use href="#i-arrow"/></svg>
+        </a>
+      </nav>
+
+      <a href="#donate" class="btn btn--donate header__cta">
+        Donate Now
+        <svg class="btn__icon"><use href="#i-arrow"/></svg>
+      </a>
+
+      <button class="nav-toggle" aria-label="Open menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+    <div class="container hero__inner">
+      <h1 class="hero__title">
+        1 in 4 People Are Broken Inside.<br>
+        You Could Be Their Lifeline...
+      </h1>
+      <p class="hero__lead">
+        Millions are suffering in silence because mental health in Pakistan is
+        invisible, underfunded, unspoken, and completely ignored.
+      </p>
+      <p class="hero__sub">You can change that. Right now. With whatever you can give.</p>
+
+      <div class="hero__actions">
+        <a href="#donate" class="btn btn--teal btn--lg">
+          Yes, I Want to Help Someone Heal
+          <svg class="btn__icon"><use href="#i-arrow"/></svg>
+        </a>
+      </div>
+
+      <p class="hero__pledge">100% of your donation goes directly toward mental health support for underserved Pakistanis.</p>
+
+      <ul class="hero__stats">
+        <li>
+          <span class="stat__num">200,000+</span>
+          <span class="stat__label">Lives treated</span>
+        </li>
+        <li>
+          <span class="stat__num">30,000+</span>
+          <span class="stat__label">Patients annually</span>
+        </li>
+        <li>
+          <span class="stat__num">100%</span>
+          <span class="stat__label">Free care</span>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       FOUNDER
+       ============================================================ -->
+  <section class="founder section" id="about">
+    <div class="container">
+      <p class="eyebrow eyebrow--center">Leader in Mental Health Reform</p>
+      <h2 class="section__title section__title--center">Meet Our Founder</h2>
+      <p class="section__lead section__lead--center">
+        Professor Dr. Shakil Jehangir Malik, founder of Neuro Sciences Foundation Pakistan, is a renowned
+        neuro-psychiatrist with <strong>40 years of global experience</strong>. He has transformed mental
+        health care by challenging stigma and promoting humane, community-centered practices.
+      </p>
+
+      <ul class="partner-logos" aria-label="Partner organizations">
+        <li><img class="partner__logo" src="Assets%20Home%20page/Logos/4bbd2309bbbcf45ccf6817f2429df7325cd9af97.png" alt="">WHO Pakistan</li>
+        <li><img class="partner__logo" src="Assets%20Home%20page/Logos/e8cdad0d3205c7691a2219a1a144c51e6333b3e5.png" alt="">Aga Khan Health Services</li>
+        <li><img class="partner__logo" src="Assets%20Home%20page/Logos/9fa85a617d0b777555098cecb19c10d45feb4089.png" alt="">Edhi Foundation</li>
+        <li><img class="partner__logo" src="Assets%20Home%20page/Logos/de83e1db7f75f3763e979f71ac07762174c66d8b.png" alt="">UNHCR</li>
+      </ul>
+
+      <div class="founder__grid">
+        <figure class="founder__photo">
+          <img src="Assets%20Home%20page/SHakil%20Jehangir%20Malik.png" alt="Dr. Shakil Jehangir Malik">
+          <figcaption>
+            <span class="founder__name">Dr. Shakil Jehangir Malik</span>
+            <span class="founder__role">Founder</span>
+          </figcaption>
+        </figure>
+
+        <div class="founder__cards">
+          <article class="info-card">
+            <h3 class="info-card__title">Experience in over 40 years</h3>
+            <p>Decades of trusted clinical expertise</p>
+          </article>
+
+          <article class="info-card">
+            <h3 class="info-card__title">Organizational Credibility</h3>
+            <p>Registered NGO in Pakistan with annual audited reports</p>
+          </article>
+
+          <article class="info-card info-card--feature">
+            <h3 class="info-card__title">Built on Expertise. Driven by Compassion.</h3>
+            <p>Built on expertise and driven by compassion, the Neuro Sciences Foundation delivers transparent, people-centered mental health care in Pakistan.</p>
+            <a href="#" class="btn btn--white-pill">
+              Read Full Story
+              <svg class="btn__icon"><use href="#i-arrow"/></svg>
+            </a>
+          </article>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       MISSION STATEMENT
+       ============================================================ -->
+  <section class="mission section">
+    <div class="container">
+      <h2 class="mission__text">
+        <span class="mission__part mission__part--dark">In Pakistan, mental health is still misunderstood and neglected.</span>
+        <span class="mission__part mission__part--gray">Millions struggle with depression, trauma, and neurological conditions yet access to care remains extremely limited.</span>
+      </h2>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       OUR SOLUTION
+       ============================================================ -->
+  <section class="solutions section" id="our-work">
+    <div class="container">
+      <p class="eyebrow eyebrow--center">Our Solution</p>
+      <h2 class="section__title section__title--center">Care that reaches every corner</h2>
+      <p class="section__lead section__lead--center">
+        From Karachi clinics to Balochistan villages — our programs are built for Pakistan's diverse reality,
+        reaching communities with care, resilience, and hope.
+      </p>
+
+      <div class="solutions__grid">
+        <article class="solution-card">
+          <div class="solution-card__body">
+            <img class="solution-card__icon" src="Assets%20Home%20page/Our%20solution%20Icons/Free%20Psychiatric%20Care.svg" alt="">
+            <h3>Free Psychiatric<br>Care</h3>
+            <p>Diagnosis, treatment and counseling</p>
+          </div>
+          <img class="solution-card__img" src="Assets%20Home%20page/Our%20solution%20Icons/Images/2.png" alt="">
+        </article>
+
+        <article class="solution-card">
+          <div class="solution-card__body">
+            <img class="solution-card__icon" src="Assets%20Home%20page/Our%20solution%20Icons/community.svg" alt="">
+            <h3>Community<br>Clinics</h3>
+            <p>Urban, rural, and mobile outreach programs</p>
+          </div>
+          <img class="solution-card__img" src="Assets%20Home%20page/Our%20solution%20Icons/Images/1.png" alt="">
+        </article>
+
+        <article class="solution-card">
+          <div class="solution-card__body">
+            <img class="solution-card__icon" src="Assets%20Home%20page/Our%20solution%20Icons/Autism.svg" alt="">
+            <h3>Autism &amp; Special Needs Support</h3>
+            <p>Helping families and personalized programs</p>
+          </div>
+          <img class="solution-card__img" src="Assets%20Home%20page/Our%20solution%20Icons/Images/3.png" alt="">
+        </article>
+
+        <article class="solution-card">
+          <div class="solution-card__body">
+            <img class="solution-card__icon" src="Assets%20Home%20page/Our%20solution%20Icons/Training%20and%20awareness.svg" alt="">
+            <h3>Training &amp; Awareness</h3>
+            <p>Building knowledge through workshops</p>
+          </div>
+          <img class="solution-card__img" src="Assets%20Home%20page/Our%20solution%20Icons/Images/4.png" alt="">
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       IMPACT + STORIES (shared white card wrapper)
+       ============================================================ -->
+  <div class="impact-stories">
+  <!-- ============================================================
+       REAL IMPACT
+       ============================================================ -->
+  <section class="impact section">
+    <div class="container">
+      <div class="impact__inner">
+        <div class="impact__media">
+          <img src="Assets%20Home%20page/THe%20impact.png" alt="">
+        </div>
+        <div class="impact__content">
+          <p class="eyebrow">The Impact</p>
+          <h2 class="section__title">Real Impact. Real Lives<br>Changed.</h2>
+          <p class="section__lead">
+            From one clinic to a nationwide network restoring hope at scale.
+          </p>
+          <ul class="impact__stats">
+            <li>
+              <span class="stat__num">200,000+</span>
+              <span class="stat__label">Patients treated since founding</span>
+            </li>
+            <li>
+              <span class="stat__num">25+</span>
+              <span class="stat__label">Clinics across Pakistan</span>
+            </li>
+            <li>
+              <span class="stat__num">2,000+</span>
+              <span class="stat__label">Professionals trained</span>
+            </li>
+            <li>
+              <span class="stat__num">30,000+</span>
+              <span class="stat__label">Patients treated annually</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       STORIES
+       ============================================================ -->
+  <section class="stories section" id="stories">
+    <div class="container">
+      <p class="eyebrow eyebrow--center">Success Stories</p>
+      <h2 class="section__title section__title--center">Every Number is a Human Story</h2>
+      <p class="section__lead section__lead--center">
+        Behind every statistic is a life lost, rebuilt or transformed with care and dignity.
+      </p>
+
+      <div class="stories__grid">
+        <article class="story-card">
+          <div class="story-card__images">
+            <figure class="story-card__before">
+              <img src="Assets%20Home%20page/Success%20Stories%20images/1before.png" alt="">
+              <figcaption>Before</figcaption>
+            </figure>
+            <figure class="story-card__after">
+              <img src="Assets%20Home%20page/Success%20Stories%20images/1after.png" alt="">
+              <figcaption>After</figcaption>
+            </figure>
+            <span class="story-card__arrow" aria-hidden="true">
+              <svg><use href="#i-arrow"/></svg>
+            </span>
+          </div>
+          <div class="story-card__head">
+            <h3>Junaid, 15</h3>
+            <span class="story-card__loc">
+              <svg class="story-card__pin"><use href="#i-pin"/></svg>
+              Lahore
+            </span>
+          </div>
+          <span class="story-card__tag">Depression</span>
+          <p class="story-card__excerpt">
+            I returned to school after therapy and family counseling, feeling more supported and ready to move forward.
+          </p>
+        </article>
+
+        <article class="story-card">
+          <div class="story-card__images">
+            <figure class="story-card__before">
+              <img src="Assets%20Home%20page/Success%20Stories%20images/2before.png" alt="">
+              <figcaption>Before</figcaption>
+            </figure>
+            <figure class="story-card__after">
+              <img src="Assets%20Home%20page/Success%20Stories%20images/2after.png" alt="">
+              <figcaption>After</figcaption>
+            </figure>
+            <span class="story-card__arrow" aria-hidden="true">
+              <svg><use href="#i-arrow"/></svg>
+            </span>
+          </div>
+          <div class="story-card__head">
+            <h3>Farhan, 38</h3>
+            <span class="story-card__loc">
+              <svg class="story-card__pin"><use href="#i-pin"/></svg>
+              Karachi
+            </span>
+          </div>
+          <span class="story-card__tag">Anger Issues</span>
+          <p class="story-card__excerpt">
+            Overcame years of PTSD and rebuilt the ability to connect with family, friends, and colleagues.
+          </p>
+        </article>
+
+        <article class="story-card story-card--cta">
+          <span class="story-card__big">20+</span>
+          <div class="story-card__cta-text-block">
+            <p class="story-card__cta-text">Stories of Hope and Healing</p>
+            <p class="story-card__cta-sub">Stories of resilience and recovery each a testament to care, dignity, and support.</p>
+          </div>
+          <a href="#" class="btn btn--white-pill">
+            Read More Stories
+            <svg class="btn__icon"><use href="#i-arrow"/></svg>
+          </a>
+        </article>
+      </div>
+    </div>
+  </section>
+  </div><!-- /.impact-stories -->
+
+  <!-- ============================================================
+       SERVICES + DONATE INTRO (shared blue background card)
+       ============================================================ -->
+  <div class="services-donate-zone">
+  <!-- ============================================================
+       SERVICES (Navy)
+       ============================================================ -->
+  <section class="services">
+    <div class="container">
+      <p class="eyebrow eyebrow--light eyebrow--center">Services</p>
+      <h2 class="section__title section__title--light section__title--center">Comprehensive Mental Health Support</h2>
+      <p class="section__lead section__lead--light section__lead--center">
+        Holistic care for emotional well-being, recovery, and resilience empowering individuals and
+        families with guidance and dignity.
+      </p>
+
+      <div class="services__grid">
+        <article class="service-card">
+          <div class="service-card__body">
+            <img class="service-card__icon" src="Assets%20Home%20page/Services%20Section/1.svg" alt="">
+            <h3>Psychiatric<br>Consultation</h3>
+            <p>Personalized comprehensive support to improve mental wellness</p>
+          </div>
+          <img class="service-card__img" src="Assets%20Home%20page/Services%20Section/1.png" alt="">
+        </article>
+
+        <article class="service-card">
+          <div class="service-card__body">
+            <img class="service-card__icon" src="Assets%20Home%20page/Services%20Section/2.svg" alt="">
+            <h3>Therapy &amp;<br>Counseling</h3>
+            <p>Accessible therapy and counseling supports emotional healing</p>
+          </div>
+          <img class="service-card__img" src="Assets%20Home%20page/Services%20Section/2.png" alt="">
+        </article>
+
+        <article class="service-card">
+          <div class="service-card__body">
+            <img class="service-card__icon" src="Assets%20Home%20page/Services%20Section/3.svg" alt="">
+            <h3>Medication<br>Support</h3>
+            <p>Affordable, structured medication ensures consistent recovery</p>
+          </div>
+          <img class="service-card__img" src="Assets%20Home%20page/Services%20Section/3.png" alt="">
+        </article>
+
+        <article class="service-card">
+          <div class="service-card__body">
+            <img class="service-card__icon" src="Assets%20Home%20page/Services%20Section/4.svg" alt="">
+            <h3>Rehabilitation<br>Programs</h3>
+            <p>Proven rehabilitation programs help restore mental balance</p>
+          </div>
+          <img class="service-card__img" src="Assets%20Home%20page/Services%20Section/4.png" alt="">
+        </article>
+
+        <article class="service-card">
+          <div class="service-card__body">
+            <img class="service-card__icon" src="Assets%20Home%20page/Services%20Section/5.svg" alt="">
+            <h3>Autism &amp; Development<br>Support</h3>
+            <p>Inclusive autism and developmental support, fostering lifelong wellbeing</p>
+          </div>
+          <img class="service-card__img" src="Assets%20Home%20page/Services%20Section/5.png" alt="">
+        </article>
+
+        <article class="service-card">
+          <div class="service-card__body">
+            <img class="service-card__icon" src="Assets%20Home%20page/Services%20Section/6.svg" alt="">
+            <h3>Trauma &amp; Crisis<br>Response</h3>
+            <p>Responsive trauma and crisis support, empowering steady recovery</p>
+          </div>
+          <img class="service-card__img" src="Assets%20Home%20page/Services%20Section/6.png" alt="">
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       DONATE INTRO (lives inside the shared blue zone above)
+       ============================================================ -->
+  <div class="donate-section__intro" id="donate">
+    <div class="container">
+      <p class="eyebrow eyebrow--light eyebrow--center">How You Can Help</p>
+      <h2 class="section__title section__title--light section__title--center">You Can Save a Life Today</h2>
+      <p class="section__lead section__lead--light section__lead--center">
+        Every contribution directly funds patient care, no overhead, no admin cuts.
+      </p>
+    </div>
+  </div>
+  </div><!-- /.services-donate-zone -->
+
+  <!-- ============================================================
+       DONATE TIERS — orange card overlaps blue zone above
+       ============================================================ -->
+  <section class="donate-section">
+    <div class="container donate-tiers-wrap">
+      <div class="donate-tiers">
+        <article class="tier-card">
+          <span class="tier-card__amount">Rs <strong>1000</strong></span>
+          <p>Sponsor a consultation</p>
+          <a href="#" class="tier-card__btn">Donate Now</a>
+        </article>
+        <article class="tier-card">
+          <span class="tier-card__amount">Rs <strong>2000</strong></span>
+          <p>Ongoing patient support</p>
+          <a href="#" class="tier-card__btn">Donate Now</a>
+        </article>
+        <article class="tier-card">
+          <span class="tier-card__amount">Rs <strong>10000</strong></span>
+          <p>Full therapy session</p>
+          <a href="#" class="tier-card__btn">Donate Now</a>
+        </article>
+        <article class="tier-card">
+          <span class="tier-card__amount tier-card__amount--custom"><strong>Custom</strong></span>
+          <p>Choose your own amount</p>
+          <a href="#" class="tier-card__btn">Contact Now</a>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       LOCATIONS
+       ============================================================ -->
+  <section class="locations section">
+    <div class="container">
+      <p class="eyebrow eyebrow--center">Locations</p>
+      <h2 class="section__title section__title--center">Accessible Care, Wherever It's Needed</h2>
+      <p class="section__lead section__lead--center">
+        The Neuro Sciences Foundation extends mental health support beyond communities across Pakistan,
+        delivering compassionate care without barriers.
+      </p>
+
+      <div class="locations__grid">
+        <article class="location-card">
+          <div class="location-card__icon"><svg><use href="#i-pin"/></svg></div>
+          <h3>Urban Clinics<br>Program</h3>
+          <p>Serving Islamabad and Rawalpindi Families</p>
+        </article>
+        <article class="location-card">
+          <div class="location-card__icon"><svg><use href="#i-pin"/></svg></div>
+          <h3>Semi-Urban Clinics<br>Program</h3>
+          <p>Located in Gujar Khan Outreach Program</p>
+        </article>
+        <article class="location-card">
+          <div class="location-card__icon"><svg><use href="#i-pin"/></svg></div>
+          <h3>Rural Clinics<br>Program</h3>
+          <p>Serving in Mohra Fatima, Saiyal, &amp; Sultanpur</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       HELP CTA
+       ============================================================ -->
+  <section class="help-cta">
+    <div class="container help-cta__inner">
+      <div class="help-cta__content">
+        <p class="eyebrow eyebrow--light">Get Help</p>
+        <h2 class="section__title section__title--light">
+          Are You or Someone You Know<br>Struggling?
+        </h2>
+        <p class="help-cta__hope">Hope and help are closer than you think.</p>
+        <p class="help-cta__lead">
+          You don't have to face challenges alone. Support is available, and reaching out can make
+          all the difference. Whether it's for yourself or someone you care about, taking the first
+          step toward help can open the door to hope and healing.
+        </p>
+        <div class="help-cta__actions">
+          <a href="#" class="btn btn--teal">
+            Book Free Appointment
+            <svg class="btn__icon"><use href="#i-arrow"/></svg>
+          </a>
+          <a href="#" class="btn btn--white-pill">
+            Speak to Someone Now
+            <svg class="btn__icon"><use href="#i-arrow"/></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       TRAINING + VOLUNTEER (shared white card wrapper)
+       ============================================================ -->
+  <div class="training-volunteer">
+  <!-- ============================================================
+       TRAINING (text + inline images)
+       ============================================================ -->
+  <section class="training section">
+    <div class="container">
+      <p class="eyebrow eyebrow--center">Awareness</p>
+      <h2 class="training__text">
+        <span class="training__part training__part--dark">We train professionals, educate communities, and</span>
+        <span class="training__part training__part--gray">work nationwide to change how Pakistan sees mental health.</span>
+      </h2>
+      <img class="training__float training__float--1" src="Assets%20Home%20page/Awareness%20section/1.png" alt="" aria-hidden="true">
+      <img class="training__float training__float--2" src="Assets%20Home%20page/Awareness%20section/2.png" alt="" aria-hidden="true">
+    </div>
+    <img class="training__float training__float--3" src="Assets%20Home%20page/Awareness%20section/3.png" alt="" aria-hidden="true">
+  </section>
+
+  <!-- ============================================================
+       VOLUNTEER
+       ============================================================ -->
+  <section class="volunteer section" id="volunteer">
+    <div class="container volunteer__inner">
+      <div class="volunteer__media">
+        <p class="eyebrow">Joins Us</p>
+        <h2 class="section__title">Your Skills Can Change Lives</h2>
+        <p class="section__lead">
+          Your skills can inspire, uplift, and transform lives creating opportunities and lasting change.
+        </p>
+        <div class="volunteer__slides">
+          <img class="volunteer__slide is-active" src="Assets%20Home%20page/join%20us%20section%20image.png" alt="">
+          <img class="volunteer__slide" src="Assets%20Home%20page/join%20us%20section%20image.png" alt="">
+          <img class="volunteer__slide" src="Assets%20Home%20page/join%20us%20section%20image.png" alt="">
+          <div class="volunteer__progress" aria-hidden="true">
+            <span class="volunteer__progress-bar is-active"></span>
+            <span class="volunteer__progress-bar"></span>
+            <span class="volunteer__progress-bar"></span>
+          </div>
+        </div>
+      </div>
+
+      <ul class="volunteer__list">
+        <li class="volunteer__item is-active">
+          <span class="volunteer__num">.01</span>
+          <span class="volunteer__role">Medical &amp; Clinical</span>
+          <a href="#" class="btn btn--white-pill">
+            Join Now
+            <svg class="btn__icon"><use href="#i-arrow"/></svg>
+          </a>
+        </li>
+        <li class="volunteer__item">
+          <span class="volunteer__num">.02</span>
+          <span class="volunteer__role">Social Work</span>
+          <a href="#" class="btn btn--white-pill">
+            Join Now
+            <svg class="btn__icon"><use href="#i-arrow"/></svg>
+          </a>
+        </li>
+        <li class="volunteer__item">
+          <span class="volunteer__num">.03</span>
+          <span class="volunteer__role">Operations</span>
+          <a href="#" class="btn btn--white-pill">
+            Join Now
+            <svg class="btn__icon"><use href="#i-arrow"/></svg>
+          </a>
+        </li>
+        <li class="volunteer__item">
+          <span class="volunteer__num">.04</span>
+          <span class="volunteer__role">Fundraising</span>
+          <a href="#" class="btn btn--white-pill">
+            Join Now
+            <svg class="btn__icon"><use href="#i-arrow"/></svg>
+          </a>
+        </li>
+        <li class="volunteer__item">
+          <span class="volunteer__num">.05</span>
+          <span class="volunteer__role">Community Outreach</span>
+          <a href="#" class="btn btn--white-pill">
+            Join Now
+            <svg class="btn__icon"><use href="#i-arrow"/></svg>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </section>
+  </div><!-- /.training-volunteer -->
+
+  <!-- ============================================================
+       CONTACT
+       ============================================================ -->
+  <section class="contact section" id="contact">
+    <div class="container contact__inner">
+      <div class="contact__intro">
+        <p class="eyebrow">Contact Us</p>
+        <h2 class="section__title">Reach Out to Us</h2>
+        <p class="section__lead">
+          We're here to listen and support—take the first step today with us.
+        </p>
+
+        <ul class="contact__details">
+          <li>
+            <span class="contact__icon"><svg><use href="#i-pin"/></svg></span>
+            <div>
+              <strong>Visit Us</strong>
+              <p>H#25, St#35, G-14/4, G-14, <strong>Islamabad</strong></p>
+              <p>H#311, St#4, Gulraiz Phase 3, <strong>Rawalpindi</strong></p>
+            </div>
+          </li>
+          <li>
+            <span class="contact__icon"><svg><use href="#i-phone"/></svg></span>
+            <div>
+              <strong>Call Us</strong>
+              <p>051-8444574, 0300-8991821 (<strong>Islamabad</strong>)</p>
+              <p>051-5509294, 0331-5355043 (<strong>Rawalpindi</strong>)</p>
+            </div>
+          </li>
+        </ul>
+      </div>
+
+      <form class="contact__form" onsubmit="return false;">
+        <div class="form-row">
+          <label>
+            <span>Full name</span>
+            <input type="text" placeholder="Enter Name" />
+          </label>
+          <label>
+            <span>Phone</span>
+            <input type="tel" placeholder="Phone Number" />
+          </label>
+        </div>
+        <label>
+          <span>Email</span>
+          <input type="email" placeholder="Enter Email" />
+        </label>
+        <label>
+          <span>Message</span>
+          <textarea rows="4" placeholder="Type Message"></textarea>
+        </label>
+        <button type="submit" class="btn btn--teal btn--lg">
+          Send Now
+          <svg class="btn__icon"><use href="#i-arrow"/></svg>
+        </button>
+      </form>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       END CTA (Orange)
+       ============================================================ -->
+  <section class="end-cta">
+    <div class="container end-cta__inner">
+      <p class="eyebrow">Find Strength</p>
+      <h2 class="section__title">No One Should Suffer in Silence</h2>
+      <p class="section__lead">
+        Thousands of families are waiting. Your support can change everything.
+      </p>
+      <div class="end-cta__actions">
+        <a href="#" class="btn btn--white-pill">
+          Donate Now
+          <svg class="btn__icon"><use href="#i-arrow"/></svg>
+        </a>
+        <a href="#" class="btn btn--white-pill">
+          Get Help Today
+          <svg class="btn__icon"><use href="#i-arrow"/></svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       FOOTER
+       ============================================================ -->
+  <footer class="site-footer">
+    <div class="container">
+      <a href="#" class="logo logo--center site-footer__logo" aria-label="Neuro Sciences Foundation">
+        <img src="Assets%20Home%20page/Logo.png" alt="Neuro Sciences Foundation">
+      </a>
+
+      <p class="site-footer__intro">
+        At Neuro Sciences Foundation we provide high-quality mental health treatment and primary care,
+        ensuring that even the most underserved segments of the society receive the support they need.
+      </p>
+
+      <nav class="footer-nav" aria-label="Footer">
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#about">About Us</a></li>
+          <li><a href="#our-work">Services</a></li>
+          <li><a href="#stories">Our Story</a></li>
+          <li><a href="#stories">Gallery</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+
+      <ul class="socials" aria-label="Social media">
+        <li><a href="#" aria-label="Facebook"><svg><use href="#i-fb"/></svg></a></li>
+        <li><a href="#" aria-label="Instagram"><svg><use href="#i-ig"/></svg></a></li>
+        <li><a href="#" aria-label="LinkedIn"><svg><use href="#i-li"/></svg></a></li>
+      </ul>
+
+      <p class="site-footer__copy">© 2025 Neuro Sciences Foundation. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+    document.querySelector('.nav-toggle')?.addEventListener('click', function () {
+      const open = this.getAttribute('aria-expanded') === 'true';
+      this.setAttribute('aria-expanded', String(!open));
+      document.querySelector('.main-nav').classList.toggle('is-open');
+    });
+
+    /* ---------- Mission: word-by-word reveal ----------
+       Wrap each word in <span class="mission__word"> with an incremental
+       transition delay. CSS handles the fade/blur/translate when .mission
+       gets the .in-view class from the section observer below.           */
+    (function () {
+      const mission = document.querySelector('.mission__text');
+      if (!mission) return;
+      const parts = mission.querySelectorAll('.mission__part');
+      if (!parts.length) return;
+
+      const stepMs = 70; // gap between successive word reveals
+      let i = 0;
+      parts.forEach((part) => {
+        const words = part.textContent.trim().split(/\s+/);
+        part.innerHTML = words.map((w) => {
+          const delay = (i++ * stepMs) / 1000;
+          return `<span class="mission__word" style="--word-delay:${delay}s">${w}</span>`;
+        }).join(' ');
+      });
+    })();
+
+    /* ---------- Volunteer slideshow: cycle slides + progress bars ---------- */
+    (function () {
+      const slides = document.querySelectorAll('.volunteer__slide');
+      const bars = document.querySelectorAll('.volunteer__progress-bar');
+      if (slides.length < 2 || bars.length !== slides.length) return;
+
+      let idx = 0;
+      const intervalMs = 3500;
+      setInterval(() => {
+        slides[idx].classList.remove('is-active');
+        bars[idx].classList.remove('is-active');
+        idx = (idx + 1) % slides.length;
+        slides[idx].classList.add('is-active');
+        bars[idx].classList.add('is-active');
+      }, intervalMs);
+    })();
+
+    /* ---------- Awareness: word-by-word reveal ----------
+       Same per-word fade/blur/rise as the mission section, but without
+       the typewriter erase loop. Triggers when .training gets .in-view.
+       The word "health." is also marked with --block so it lands on its
+       own line.                                                       */
+    (function () {
+      const training = document.querySelector('.training__text');
+      if (!training) return;
+      const parts = training.querySelectorAll('.training__part');
+      if (!parts.length) return;
+
+      const stepMs = 70;
+      let i = 0;
+      parts.forEach((part) => {
+        const words = part.textContent.trim().split(/\s+/);
+        part.innerHTML = words.map((w) => {
+          const delay = (i++ * stepMs) / 1000;
+          const blockClass = w === 'health.' ? ' training__word--block' : '';
+          return `<span class="training__word${blockClass}" style="--word-delay:${delay}s">${w}</span>`;
+        }).join(' ');
+      });
+    })();
+
+    /* ---------- Mission: typewriter cycle on "depression" ----------
+       After the per-word reveal completes, replace the "depression," word
+       with a typewriter that erases the current term and writes the next
+       one, looping forever through a list of mental health themes.    */
+    (function () {
+      const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      const grayWords = document.querySelectorAll('.mission__part--gray .mission__word');
+      if (!grayWords.length) return;
+
+      let target = null;
+      grayWords.forEach((w) => {
+        if (w.textContent.trim() === 'depression,') target = w;
+      });
+      if (!target) return;
+
+      // Replace the word with a cycle structure; trailing comma stays static.
+      target.innerHTML =
+        '<span class="mission__cycle">' +
+          '<span class="mission__cycle-text">depression</span>' +
+          '<span class="mission__cycle-cursor"></span>' +
+        '</span>,';
+
+      // Lock the slot width to the natural rendered width of the longest
+      // phrase ("depression") + cursor + comma. Shorter phrases will leave
+      // empty space on the right but the surrounding line won't reflow.
+      const lockSlotWidth = () => {
+        const w = target.getBoundingClientRect().width;
+        if (w > 0) target.style.minWidth = w + 'px';
+      };
+      // Measure now if layout is settled, otherwise on next frame.
+      if (target.getBoundingClientRect().width > 0) {
+        lockSlotWidth();
+      } else {
+        requestAnimationFrame(lockSlotWidth);
+      }
+
+      if (reduce) return; // honor reduced motion: keep "depression" static
+
+      const cycleEl = target.querySelector('.mission__cycle-text');
+      const phrases = ['depression', 'stress', 'isolation', 'anxiety', 'grief', 'fear'];
+      let idx = 0;
+      let charIdx = phrases[0].length;
+      let erasing = true;
+
+      const TYPE_MS       = 80;
+      const ERASE_MS      = 45;
+      const HOLD_FULL_MS  = 1500;
+      const HOLD_EMPTY_MS = 220;
+
+      function step() {
+        const current = phrases[idx];
+        if (erasing) {
+          charIdx--;
+          cycleEl.textContent = current.substring(0, charIdx);
+          if (charIdx === 0) {
+            erasing = false;
+            idx = (idx + 1) % phrases.length;
+            setTimeout(step, HOLD_EMPTY_MS);
+            return;
+          }
+          setTimeout(step, ERASE_MS);
+        } else {
+          charIdx++;
+          const next = phrases[idx];
+          cycleEl.textContent = next.substring(0, charIdx);
+          if (charIdx === next.length) {
+            erasing = true;
+            setTimeout(step, HOLD_FULL_MS);
+            return;
+          }
+          setTimeout(step, TYPE_MS);
+        }
+      }
+
+      // Start cycling once the mission section is in view, after the
+      // word-by-word reveal has had time to settle.
+      const mission = document.querySelector('.mission');
+      if (!mission || !('IntersectionObserver' in window)) {
+        setTimeout(step, 3000);
+        return;
+      }
+      const cycleIO = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            setTimeout(step, 2500);
+            cycleIO.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.3 });
+      cycleIO.observe(mission);
+    })();
+
+    /* ---------- Premium scroll reveal: section + staggered children ----------
+       Each non-hero section starts blurred + lowered + scaled down. When ~20%
+       of the section enters the viewport, it transitions in, and its direct
+       content blocks animate sequentially with a 0.1s stagger.            */
+    (function () {
+      const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      const sections = document.querySelectorAll('section:not(.hero)');
+
+      // Mark each section + identify its stagger targets.
+      sections.forEach((section) => {
+        section.classList.add('fade-section');
+
+        // Pick stagger targets: direct children of .container. If .container
+        // wraps a single inner div (e.g. .impact__inner), descend into it so
+        // the eyebrow / title / lead / grid animate individually.
+        const container = section.querySelector('.container') || section;
+        let targets = Array.from(container.children);
+        if (targets.length === 1 && targets[0].children.length > 1) {
+          targets = Array.from(targets[0].children);
+        }
+        targets.forEach((child, i) => {
+          child.classList.add('fade-child');
+          child.style.setProperty('--stagger-delay', `${0.1 + i * 0.1}s`);
+        });
+      });
+
+      // Reduced motion / no IO: reveal everything immediately.
+      if (reduce || !('IntersectionObserver' in window)) {
+        sections.forEach((s) => s.classList.add('in-view'));
+        return;
+      }
+
+      const io = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('in-view');
+            io.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.2, rootMargin: '0px 0px -10% 0px' });
+
+      sections.forEach((s) => io.observe(s));
+    })();
+
+    /* ---------- Smooth scroll engine with inertia (transform-based) ----------
+       Wraps page content in a fixed-position .scroll-content layer. Native
+       scroll still drives navigation (wheel, keyboard, anchors, scrollbar)
+       so accessibility is preserved — but the visual content lerps toward
+       the native scroll position each frame, producing the buttery inertia
+       feel of premium Framer/Apple-style sites.
+
+       Key state:
+         target  → desired scroll position (= window.scrollY, updated instantly)
+         current → actual transform offset (lerped toward target each frame)
+       Lerp:
+         current += (target - current) * ease   // ease ≈ 0.08 per spec   */
+    (function () {
+      const reduce  = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      const coarse  = window.matchMedia('(pointer: coarse)').matches;
+      // Skip on touch (use native momentum) and when reduced-motion is set.
+      if (reduce || coarse) return;
+
+      // Wrap every body child into a single .scroll-content layer.
+      const scrollContent = document.createElement('div');
+      scrollContent.className = 'scroll-content';
+      while (document.body.firstChild) {
+        scrollContent.appendChild(document.body.firstChild);
+      }
+      document.body.appendChild(scrollContent);
+
+      // Preserve any scroll position the browser restored on reload.
+      const startY = window.scrollY;
+      let target  = startY;
+      let current = startY;
+      const ease  = 0.08;
+
+      // Body is empty otherwise (scroll-content is fixed) — give it the
+      // content's height so the native scrollbar drives navigation.
+      function syncBodyHeight() {
+        document.body.style.height = scrollContent.offsetHeight + 'px';
+      }
+
+      // Animation loop: ease current toward target, write transform.
+      function tick() {
+        const delta = target - current;
+        if (Math.abs(delta) < 0.05) {
+          current = target;
+        } else {
+          current += delta * ease;
+        }
+        // translate3d to keep the layer on the GPU and avoid sub-pixel jitter.
+        scrollContent.style.transform = `translate3d(0, ${-current}px, 0)`;
+        requestAnimationFrame(tick);
+      }
+
+      // Capture target from native scroll (wheel, keyboard, anchors all funnel here).
+      window.addEventListener('scroll', () => {
+        target = window.scrollY;
+      }, { passive: true });
+
+      // Recompute body height on viewport resize and content size changes.
+      window.addEventListener('resize', syncBodyHeight);
+      if ('ResizeObserver' in window) {
+        new ResizeObserver(syncBodyHeight).observe(scrollContent);
+      }
+
+      syncBodyHeight();
+      // Restore scrollbar position after wrapping reset it to 0.
+      if (startY > 0) window.scrollTo(0, startY);
+      requestAnimationFrame(tick);
+    })();
+
+  </script>
+</body>
+</html>
