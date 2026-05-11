@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact Us — Neuro Sciences Foundation</title>
+  <meta name="description" content="Reach NSFP for mental health support, partnerships, or volunteering — accessible care without fear or judgment." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Source+Sans+3:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body class="page-contact">
+
+  <!-- ============================================================
+       SVG ICON SPRITE
+       ============================================================ -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <defs>
+      <symbol id="i-arrow" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M5 12h14m-6-7 7 7-7 7"/></symbol>
+      <symbol id="i-pin" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" d="M12 22s8-7 8-13a8 8 0 0 0-16 0c0 6 8 13 8 13z"/><circle cx="12" cy="9" r="2.5" fill="none" stroke="currentColor" stroke-width="1.8"/></symbol>
+      <symbol id="i-phone" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" d="M22 17v3a2 2 0 0 1-2.2 2 19 19 0 0 1-8.3-3 18.7 18.7 0 0 1-6-6A19 19 0 0 1 2.5 4.2 2 2 0 0 1 4.5 2H7a2 2 0 0 1 2 1.7c.1 1 .3 2 .6 3a2 2 0 0 1-.5 2L8 9.7a16 16 0 0 0 6 6l1-1a2 2 0 0 1 2.1-.5c1 .3 2 .5 3 .6A2 2 0 0 1 22 17z"/></symbol>
+      <symbol id="i-mark" viewBox="0 0 64 64">
+        <g fill="none" stroke="#14B8A6" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M32 12c-7 0-12 5-12 12 0 6 4 10 8 12-4 2-8 6-8 12 0 7 5 12 12 12s12-5 12-12c0-6-4-10-8-12 4-2 8-6 8-12 0-7-5-12-12-12Z"/>
+          <path d="M20 24c-4 0-6 3-6 6s2 6 6 6"/>
+          <path d="M44 24c4 0 6 3 6 6s-2 6-6 6"/>
+          <circle cx="32" cy="32" r="3.4" fill="#14B8A6"/>
+        </g>
+      </symbol>
+      <symbol id="i-fb" viewBox="0 0 24 24"><path fill="currentColor" d="M22 12a10 10 0 1 0-11.6 9.9V14.9H7.9V12h2.5V9.8c0-2.5 1.5-3.9 3.8-3.9 1.1 0 2.2.2 2.2.2v2.5h-1.3c-1.2 0-1.6.8-1.6 1.6V12h2.8l-.5 2.9h-2.3v7A10 10 0 0 0 22 12z"/></symbol>
+      <symbol id="i-ig" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="5" fill="none" stroke="currentColor" stroke-width="1.8"/><circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="1.8"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></symbol>
+      <symbol id="i-li" viewBox="0 0 24 24"><path fill="currentColor" d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14zM8.3 18.3v-8H5.7v8h2.6zM7 9.1a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3zm11.3 9.2v-4.4c0-2.4-1.3-3.5-3-3.5a2.6 2.6 0 0 0-2.4 1.3v-1.1H10.3v8h2.6v-4.4c0-1.2.6-1.9 1.6-1.9.9 0 1.4.6 1.4 1.9v4.4h2.4z"/></symbol>
+    </defs>
+  </svg>
+
+  <!-- ============================================================
+       HERO (blue, no CTA)
+       ============================================================ -->
+  <section class="hero hero--contact">
+    <header class="site-header">
+      <div class="container header__inner">
+        <a href="index.html" class="logo" aria-label="Neuro Sciences Foundation">
+          <img class="logo__img" src="Assets%20Home%20page/Logo.png" alt="Neuro Sciences Foundation" />
+        </a>
+
+        <nav class="main-nav" aria-label="Primary">
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="index.html#our-work">Our Work</a></li>
+            <li><a href="index.html#volunteer">Get Help</a></li>
+            <li><a href="index.html#volunteer">Volunteer</a></li>
+            <li><a href="index.html#stories">Stories</a></li>
+            <li><a href="contact.html" class="is-active">Contact</a></li>
+          </ul>
+          <a href="donate.html" class="btn btn--donate main-nav__cta">
+            Donate Now
+            <svg class="btn__icon"><use href="#i-arrow"/></svg>
+          </a>
+        </nav>
+
+        <a href="donate.html" class="btn btn--donate header__cta">
+          Donate Now
+          <svg class="btn__icon"><use href="#i-arrow"/></svg>
+        </a>
+
+        <button class="nav-toggle" aria-label="Open menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </header>
+
+    <div class="container hero-contact__inner">
+      <span class="hero-contact__mark" aria-hidden="true">
+        <img src="Contact%20us%20Page/Hero%20sectio%20lgoo.svg" alt="">
+      </span>
+      <h1 class="hero-contact__title">Get in Touch With Us</h1>
+      <p class="hero-contact__lead">
+        Whether you need support, want to volunteer, or simply have a question
+        — NSFP is here to listen, without fear or judgment.
+      </p>
+      <p class="hero-contact__sub">Every message matters.</p>
+    </div>
+
+    <!-- Looping image gallery -->
+    <div class="hero-contact__gallery" aria-hidden="true">
+      <div class="hero-contact__gallery-track">
+        <img src="Contact%20us%20Page/Carousel%20images/21-768x543.png" alt="">
+        <img src="Contact%20us%20Page/Carousel%20images/33-1-768x543.png" alt="">
+        <img src="Contact%20us%20Page/Carousel%20images/39-768x543.png" alt="">
+        <img src="Contact%20us%20Page/Carousel%20images/46-768x543.png" alt="">
+        <img src="Contact%20us%20Page/Carousel%20images/53-768x543.png" alt="">
+        <img src="Contact%20us%20Page/Carousel%20images/70-768x543.png" alt="">
+        <img src="Contact%20us%20Page/Carousel%20images/73-768x543.png" alt="">
+        <img src="Contact%20us%20Page/Carousel%20images/85-768x543.png" alt="">
+        <img src="Contact%20us%20Page/Carousel%20images/92-768x543.png" alt="">
+        <img src="Contact%20us%20Page/Carousel%20images/96-768x543.png" alt="">
+        <!-- Duplicated for seamless loop -->
+        <img src="Contact%20us%20Page/Carousel%20images/21-768x543.png" alt="">
+        <img src="Contact%20us%20Page/Carousel%20images/33-1-768x543.png" alt="">
+        <img src="Contact%20us%20Page/Carousel%20images/39-768x543.png" alt="">
+        <img src="Contact%20us%20Page/Carousel%20images/46-768x543.png" alt="">
+        <img src="Contact%20us%20Page/Carousel%20images/53-768x543.png" alt="">
+        <img src="Contact%20us%20Page/Carousel%20images/70-768x543.png" alt="">
+        <img src="Contact%20us%20Page/Carousel%20images/73-768x543.png" alt="">
+        <img src="Contact%20us%20Page/Carousel%20images/85-768x543.png" alt="">
+        <img src="Contact%20us%20Page/Carousel%20images/92-768x543.png" alt="">
+        <img src="Contact%20us%20Page/Carousel%20images/96-768x543.png" alt="">
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       OUR CLINICS & SCHOOLS
+       ============================================================ -->
+  <section class="clinics section">
+    <div class="container">
+      <p class="eyebrow eyebrow--center">Get In-Person Support</p>
+      <h2 class="section__title section__title--center">Our Clinics &amp; Schools</h2>
+
+      <div class="clinics__grid">
+        <article class="clinic-card clinic-card--featured">
+          <p class="clinic-card__type">Clinic</p>
+          <h3>Islamabad,<br>Pakistan</h3>
+          <p class="clinic-card__city">Islamabad</p>
+          <p class="clinic-card__addr">G-14/4, Islamabad</p>
+          <p class="clinic-card__phone">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-phone"/></svg>
+            <span>+1(122)800 88 08</span>
+          </p>
+          <a href="https://www.google.com/maps/dir/?api=1&amp;destination=G-14%2F4%2C+Islamabad%2C+Pakistan" target="_blank" rel="noopener noreferrer" class="clinic-card__btn">
+            Get Direction
+            <svg class="btn__icon"><use href="#i-arrow"/></svg>
+          </a>
+          <svg class="clinic-card__watermark" viewBox="0 0 64 64" aria-hidden="true"><use href="#i-mark"/></svg>
+        </article>
+
+        <article class="clinic-card">
+          <p class="clinic-card__type">Clinic</p>
+          <h3>Village Saiyal,<br>Chakri</h3>
+          <p class="clinic-card__city">Chakri</p>
+          <p class="clinic-card__addr">Village Saiyal, Chakri</p>
+          <p class="clinic-card__phone">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-phone"/></svg>
+            <span>+1(122)800 88 08</span>
+          </p>
+          <a href="https://www.google.com/maps/dir/?api=1&amp;destination=Village+Saiyal%2C+Chakri%2C+Pakistan" target="_blank" rel="noopener noreferrer" class="clinic-card__btn">
+            Get Direction
+            <svg class="btn__icon"><use href="#i-arrow"/></svg>
+          </a>
+        </article>
+
+        <article class="clinic-card">
+          <p class="clinic-card__type">Clinic</p>
+          <h3>Village Sultanpur,<br>Hassanabad</h3>
+          <p class="clinic-card__city">Hassanabad</p>
+          <p class="clinic-card__addr">Village Sultanpur, Hassanabad</p>
+          <p class="clinic-card__phone">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-phone"/></svg>
+            <span>+1(122)800 88 08</span>
+          </p>
+          <a href="https://www.google.com/maps/dir/?api=1&amp;destination=Village+Sultanpur%2C+Hassanabad%2C+Pakistan" target="_blank" rel="noopener noreferrer" class="clinic-card__btn">
+            Get Direction
+            <svg class="btn__icon"><use href="#i-arrow"/></svg>
+          </a>
+        </article>
+
+        <article class="clinic-card">
+          <p class="clinic-card__type">Clinic</p>
+          <h3>Mohra Fatima, Mandra<br>Chakwal Road</h3>
+          <p class="clinic-card__city">Mandra Chakwal</p>
+          <p class="clinic-card__addr">Moha Fatima, Mandra Chakwal Road</p>
+          <p class="clinic-card__phone">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-phone"/></svg>
+            <span>+1(122)800 88 08</span>
+          </p>
+          <a href="https://www.google.com/maps/dir/?api=1&amp;destination=Mohra+Fatima%2C+Mandra+Chakwal+Road%2C+Pakistan" target="_blank" rel="noopener noreferrer" class="clinic-card__btn">
+            Get Direction
+            <svg class="btn__icon"><use href="#i-arrow"/></svg>
+          </a>
+        </article>
+
+        <article class="clinic-card">
+          <p class="clinic-card__type">School</p>
+          <h3>Sir Syed Avenue,<br>Gulraiz 6</h3>
+          <p class="clinic-card__city">Gulraiz 6</p>
+          <p class="clinic-card__addr">H#151a, Sir Syed Avenue, Rawalpindi</p>
+          <p class="clinic-card__phone">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-phone"/></svg>
+            <span>+1(122)800 88 08</span>
+          </p>
+          <a href="https://www.google.com/maps/dir/?api=1&amp;destination=Sir+Syed+Avenue%2C+Gulraiz+6%2C+Rawalpindi%2C+Pakistan" target="_blank" rel="noopener noreferrer" class="clinic-card__btn">
+            Get Direction
+            <svg class="btn__icon"><use href="#i-arrow"/></svg>
+          </a>
+        </article>
+
+        <article class="clinic-card">
+          <p class="clinic-card__type">School</p>
+          <h3>Gulraiz 3,<br>Rawalpindi</h3>
+          <p class="clinic-card__city">Gulraiz 3</p>
+          <p class="clinic-card__addr">H#311, Street #4, Rawalpindi</p>
+          <p class="clinic-card__phone">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-phone"/></svg>
+            <span>+1(122)800 88 08</span>
+          </p>
+          <a href="https://www.google.com/maps/dir/?api=1&amp;destination=Gulraiz+3%2C+Rawalpindi%2C+Pakistan" target="_blank" rel="noopener noreferrer" class="clinic-card__btn">
+            Get Direction
+            <svg class="btn__icon"><use href="#i-arrow"/></svg>
+          </a>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       CONTACT FORM
+       ============================================================ -->
+  <section class="contact section" id="contact">
+    <div class="container contact__inner">
+      <div class="contact__intro">
+        <p class="eyebrow">Contact Us</p>
+        <h2 class="section__title">Reach Out to Us</h2>
+        <p class="section__lead">
+          We're here to listen and support—take the first step today with us.
+        </p>
+
+        <ul class="contact__details">
+          <li>
+            <span class="contact__icon"><svg><use href="#i-pin"/></svg></span>
+            <div>
+              <strong>Visit Us</strong>
+              <p>H#25, St#35, G-14/4, G-14, <strong>Islamabad</strong></p>
+              <p>H#311, St#4, Gulraiz Phase 3, <strong>Rawalpindi</strong></p>
+            </div>
+          </li>
+          <li>
+            <span class="contact__icon"><svg><use href="#i-phone"/></svg></span>
+            <div>
+              <strong>Call Us</strong>
+              <p>051-8444574, 0300-8991821 (<strong>Islamabad</strong>)</p>
+              <p>051-5509294, 0331-5355043 (<strong>Rawalpindi</strong>)</p>
+            </div>
+          </li>
+        </ul>
+      </div>
+
+      <form class="contact__form" onsubmit="return false;">
+        <div class="form-row">
+          <label>
+            <span>Full name</span>
+            <input type="text" placeholder="Full name" />
+          </label>
+          <label>
+            <span>Phone</span>
+            <input type="tel" placeholder="Phone" />
+          </label>
+        </div>
+        <label>
+          <span>Email</span>
+          <input type="email" placeholder="Email" />
+        </label>
+        <label>
+          <span>Message</span>
+          <textarea rows="4" placeholder=""></textarea>
+        </label>
+        <button type="submit" class="btn btn--teal btn--lg">
+          Send Now
+          <svg class="btn__icon"><use href="#i-arrow"/></svg>
+        </button>
+      </form>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       END CTA (Orange Find Strength)
+       ============================================================ -->
+  <section class="end-cta">
+    <div class="container end-cta__inner">
+      <p class="eyebrow">Find Strength</p>
+      <h2 class="section__title">No One Should Suffer in Silence</h2>
+      <p class="section__lead">
+        Thousands of families are waiting. Your support can change everything.
+      </p>
+      <div class="end-cta__actions">
+        <a href="donate.html" class="btn btn--white-pill">
+          Donate Now
+          <svg class="btn__icon"><use href="#i-arrow"/></svg>
+        </a>
+        <a href="#" class="btn btn--white-pill">
+          Get Help Today
+          <svg class="btn__icon"><use href="#i-arrow"/></svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       FOOTER
+       ============================================================ -->
+  <footer class="site-footer">
+    <div class="container">
+      <a href="index.html" class="logo logo--center site-footer__logo" aria-label="Neuro Sciences Foundation">
+        <img src="Assets%20Home%20page/Logo.png" alt="Neuro Sciences Foundation">
+      </a>
+
+      <p class="site-footer__intro">
+        At Neuro Sciences Foundation we provide high-quality mental health treatment and primary care,
+        ensuring that even the most underserved segments of the society receive the support they need.
+      </p>
+
+      <nav class="footer-nav" aria-label="Footer">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="index.html#our-work">Services</a></li>
+          <li><a href="index.html#stories">Our Team &amp; Trustees</a></li>
+          <li><a href="index.html#stories">Gallery</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+      </nav>
+
+      <ul class="socials" aria-label="Social media">
+        <li><a href="#" aria-label="Facebook"><svg><use href="#i-fb"/></svg></a></li>
+        <li><a href="#" aria-label="Instagram"><svg><use href="#i-ig"/></svg></a></li>
+        <li><a href="#" aria-label="LinkedIn"><svg><use href="#i-li"/></svg></a></li>
+      </ul>
+
+      <p class="site-footer__copy">© Copyright 2022, All Rights Reserved by NSF Pakistan.</p>
+    </div>
+  </footer>
+
+  <script>
+    /* ---------- Hamburger ---------- */
+    document.querySelector('.nav-toggle')?.addEventListener('click', function () {
+      const open = this.getAttribute('aria-expanded') === 'true';
+      this.setAttribute('aria-expanded', String(!open));
+      document.querySelector('.main-nav').classList.toggle('is-open');
+    });
+
+    /* ---------- Scroll reveal ---------- */
+    (function () {
+      const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      const sections = document.querySelectorAll('section:not(.hero)');
+      const FLATTEN_SELECTOR = ['.container', '.clinics__grid', '.contact__inner', '.contact__intro', '.contact__details', '.contact__form', '.form-row', '.end-cta__inner', '.end-cta__actions'].join(',');
+
+      sections.forEach((section) => {
+        section.classList.add('fade-section');
+        let targets = [section];
+        let changed = true;
+        while (changed) {
+          changed = false;
+          const next = [];
+          targets.forEach((n) => {
+            if (n.matches && n.matches(FLATTEN_SELECTOR) && n.children.length > 0) {
+              Array.from(n.children).forEach((c) => next.push(c));
+              changed = true;
+            } else {
+              next.push(n);
+            }
+          });
+          targets = next;
+        }
+        targets.forEach((child, i) => {
+          if (child === section) return;
+          child.classList.add('fade-child');
+          child.style.setProperty('--stagger-delay', `${0.05 + i * 0.07}s`);
+        });
+      });
+
+      if (reduce || !('IntersectionObserver' in window)) {
+        sections.forEach((s) => s.classList.add('in-view'));
+        return;
+      }
+      const io = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('in-view');
+            io.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0, rootMargin: '0px' });
+      sections.forEach((s) => io.observe(s));
+    })();
+
+    /* ---------- Smooth scroll ---------- */
+    (function () {
+      const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      const coarse = window.matchMedia('(pointer: coarse)').matches;
+      if (reduce || coarse) return;
+      const scrollContent = document.createElement('div');
+      scrollContent.className = 'scroll-content';
+      while (document.body.firstChild) scrollContent.appendChild(document.body.firstChild);
+      document.body.appendChild(scrollContent);
+      const startY = window.scrollY;
+      let target = startY, current = startY;
+      const ease = 0.08;
+      function syncBodyHeight() { document.body.style.height = scrollContent.offsetHeight + 'px'; }
+      function tick() {
+        const delta = target - current;
+        if (Math.abs(delta) < 0.05) current = target;
+        else current += delta * ease;
+        scrollContent.style.transform = `translate3d(0, ${-current}px, 0)`;
+        requestAnimationFrame(tick);
+      }
+      window.addEventListener('scroll', () => { target = window.scrollY; }, { passive: true });
+      window.addEventListener('resize', syncBodyHeight);
+      if ('ResizeObserver' in window) new ResizeObserver(syncBodyHeight).observe(scrollContent);
+      syncBodyHeight();
+      if (startY > 0) window.scrollTo(0, startY);
+      requestAnimationFrame(tick);
+    })();
+
+    /* ---------- Cursor ring ---------- */
+    (function () {
+      const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      const coarse = window.matchMedia('(pointer: coarse)').matches;
+      if (reduce || coarse) return;
+      const ring = document.createElement('div');
+      ring.className = 'cursor-ring';
+      document.body.appendChild(ring);
+      let tx = innerWidth / 2, ty = innerHeight / 2, cx = tx, cy = ty;
+      const ease = 0.14; let visible = false;
+      window.addEventListener('mousemove', (e) => {
+        tx = e.clientX; ty = e.clientY;
+        if (!visible) { cx = tx; cy = ty; ring.classList.add('is-visible'); visible = true; }
+      }, { passive: true });
+      document.addEventListener('mouseleave', () => { ring.classList.remove('is-visible'); visible = false; });
+      document.addEventListener('mouseenter', () => { if (visible) ring.classList.add('is-visible'); });
+      const HOVER_SEL = 'a, button, .btn, input, textarea, label, .clinic-card, .clinic-card__btn, .nav-toggle';
+      document.addEventListener('mouseover', (e) => { if (e.target.closest && e.target.closest(HOVER_SEL)) ring.classList.add('is-hover'); });
+      document.addEventListener('mouseout',  (e) => { if (e.target.closest && e.target.closest(HOVER_SEL)) ring.classList.remove('is-hover'); });
+      function tick() {
+        cx += (tx - cx) * ease;
+        cy += (ty - cy) * ease;
+        ring.style.transform = `translate3d(${cx}px, ${cy}px, 0)`;
+        requestAnimationFrame(tick);
+      }
+      requestAnimationFrame(tick);
+    })();
+  </script>
+</body>
+</html>

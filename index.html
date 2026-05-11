@@ -51,20 +51,20 @@
 
       <nav class="main-nav" aria-label="Primary">
         <ul>
-          <li><a href="#" class="is-active">Home</a></li>
-          <li><a href="#about">About</a></li>
+          <li><a href="index.html" class="is-active">Home</a></li>
+          <li><a href="about.html">About</a></li>
           <li><a href="#our-work">Our Work</a></li>
           <li><a href="#volunteer">Volunteer</a></li>
           <li><a href="#stories">Stories</a></li>
-          <li><a href="#contact">Contact</a></li>
+          <li><a href="contact.html">Contact</a></li>
         </ul>
-        <a href="#donate" class="btn btn--donate main-nav__cta">
+        <a href="donate.html" class="btn btn--donate main-nav__cta">
           Donate Now
           <svg class="btn__icon"><use href="#i-arrow"/></svg>
         </a>
       </nav>
 
-      <a href="#donate" class="btn btn--donate header__cta">
+      <a href="donate.html" class="btn btn--donate header__cta">
         Donate Now
         <svg class="btn__icon"><use href="#i-arrow"/></svg>
       </a>
@@ -719,12 +719,12 @@
 
       <nav class="footer-nav" aria-label="Footer">
         <ul>
-          <li><a href="#">Home</a></li>
-          <li><a href="#about">About Us</a></li>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About Us</a></li>
           <li><a href="#our-work">Services</a></li>
           <li><a href="#stories">Our Story</a></li>
           <li><a href="#stories">Gallery</a></li>
-          <li><a href="#contact">Contact</a></li>
+          <li><a href="contact.html">Contact</a></li>
         </ul>
       </nav>
 
@@ -744,6 +744,68 @@
       this.setAttribute('aria-expanded', String(!open));
       document.querySelector('.main-nav').classList.toggle('is-open');
     });
+
+    /* ---------- Stats count-up ----------
+       For every .stat__num (hero + impact), .story-card__big, and the
+       <strong> inside .tier-card__amount, parse out the prefix/number/
+       suffix and animate the numeric portion from 0 with an ease-out
+       quint curve once the element scrolls into view. Non-numeric text
+       (like the "Custom" tier amount) is skipped automatically. */
+    (function () {
+      const stats = document.querySelectorAll(
+        '.hero .stat__num, .impact__stats .stat__num,' +
+        '.story-card__big, .tier-card__amount strong'
+      );
+      if (!stats.length) return;
+      const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      if (reduce) return;
+
+      function parse(text) {
+        const m = text.trim().match(/^(\D*)([\d,]+)(\D*)$/);
+        if (!m) return null;
+        return {
+          prefix: m[1],
+          target: parseInt(m[2].replace(/,/g, ''), 10),
+          suffix: m[3],
+          hasCommas: m[2].indexOf(',') !== -1
+        };
+      }
+      function fmt(n, withCommas) {
+        return withCommas ? n.toLocaleString('en-US') : String(n);
+      }
+      function animate(el, parts, duration) {
+        const start = performance.now();
+        function step(now) {
+          const t = Math.min(1, (now - start) / duration);
+          // Ease-out quint — strong deceleration, numbers race forward
+          // then settle gracefully into the final value.
+          const eased = 1 - Math.pow(1 - t, 5);
+          const current = Math.round(eased * parts.target);
+          el.textContent = parts.prefix + fmt(current, parts.hasCommas) + parts.suffix;
+          if (t < 1) requestAnimationFrame(step);
+        }
+        requestAnimationFrame(step);
+      }
+
+      stats.forEach((el) => {
+        const parts = parse(el.textContent);
+        if (!parts) return;
+        el.textContent = parts.prefix + fmt(0, parts.hasCommas) + parts.suffix;
+        if (!('IntersectionObserver' in window)) {
+          animate(el, parts, 3000);
+          return;
+        }
+        const io = new IntersectionObserver((entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              animate(el, parts, 3000);
+              io.unobserve(entry.target);
+            }
+          });
+        }, { threshold: 0.4 });
+        io.observe(el);
+      });
+    })();
 
     /* ---------- Mission: word-by-word reveal ----------
        Wrap each word in <span class="mission__word"> with an incremental
@@ -899,28 +961,72 @@
     })();
 
     /* ---------- Premium scroll reveal: section + staggered children ----------
-       Each non-hero section starts blurred + lowered + scaled down. When ~20%
-       of the section enters the viewport, it transitions in, and its direct
-       content blocks animate sequentially with a 0.1s stagger.            */
+       Each non-hero section starts blurred + lowered + scaled down. When the
+       section enters the viewport it transitions in, and every content block
+       inside — eyebrow, title, lead, AND each individual card/stat/item —
+       blurs + rises + fades sequentially. Grids/lists are flattened so each
+       card animates independently rather than as a single grid block.    */
     (function () {
       const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
       const sections = document.querySelectorAll('section:not(.hero)');
 
-      // Mark each section + identify its stagger targets.
+      // Wrappers whose children we want to expand into the stagger queue.
+      // This is what turns a grid into N individually-blurring cards instead
+      // of a single block.
+      const FLATTEN_SELECTOR = [
+        '.container',
+        '.partner-logos',
+        '.founder__grid',
+        '.founder__cards',
+        '.solutions__grid',
+        '.impact__inner',
+        '.impact__content',
+        '.impact__stats',
+        '.stories__grid',
+        '.services__grid',
+        '.donate-tiers-wrap',
+        '.donate-tiers',
+        '.locations__grid',
+        '.help-cta__inner',
+        '.help-cta__content',
+        '.help-cta__actions',
+        '.volunteer__inner',
+        '.volunteer__media',
+        '.volunteer__list',
+        '.contact__inner',
+        '.contact__intro',
+        '.contact__details',
+        '.contact__form',
+        '.form-row',
+        '.end-cta__inner',
+        '.end-cta__actions'
+      ].join(',');
+
       sections.forEach((section) => {
         section.classList.add('fade-section');
 
-        // Pick stagger targets: direct children of .container. If .container
-        // wraps a single inner div (e.g. .impact__inner), descend into it so
-        // the eyebrow / title / lead / grid animate individually.
-        const container = section.querySelector('.container') || section;
-        let targets = Array.from(container.children);
-        if (targets.length === 1 && targets[0].children.length > 1) {
-          targets = Array.from(targets[0].children);
+        // Repeatedly expand any node that matches FLATTEN_SELECTOR into its
+        // own children, until only leaf content blocks remain.
+        let targets = [section];
+        let changed = true;
+        while (changed) {
+          changed = false;
+          const next = [];
+          targets.forEach((n) => {
+            if (n.matches && n.matches(FLATTEN_SELECTOR) && n.children.length > 0) {
+              Array.from(n.children).forEach((c) => next.push(c));
+              changed = true;
+            } else {
+              next.push(n);
+            }
+          });
+          targets = next;
         }
+
         targets.forEach((child, i) => {
+          if (child === section) return;
           child.classList.add('fade-child');
-          child.style.setProperty('--stagger-delay', `${0.1 + i * 0.1}s`);
+          child.style.setProperty('--stagger-delay', `${0.05 + i * 0.07}s`);
         });
       });
 
@@ -930,6 +1036,9 @@
         return;
       }
 
+      // Trigger only when the section's top edge actually enters the
+      // viewport — no rootMargin pre-load. This way the user has to scroll
+      // TO the section before its animation runs, not before.
       const io = new IntersectionObserver((entries) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
@@ -937,7 +1046,7 @@
             io.unobserve(entry.target);
           }
         });
-      }, { threshold: 0, rootMargin: '0px 0px 15% 0px' });
+      }, { threshold: 0, rootMargin: '0px' });
 
       sections.forEach((s) => io.observe(s));
     })();
@@ -1007,6 +1116,69 @@
       syncBodyHeight();
       // Restore scrollbar position after wrapping reset it to 0.
       if (startY > 0) window.scrollTo(0, startY);
+      requestAnimationFrame(tick);
+    })();
+
+    /* ---------- Cursor ring: lerps toward the mouse with a slight delay ----
+       Appended to <body> after the smooth-scroll IIFE so it sits OUTSIDE
+       the .scroll-content layer and stays anchored to the viewport rather
+       than being translated with page content. Skipped on touch + reduced
+       motion to match the smooth-scroll fallback. */
+    (function () {
+      const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      const coarse = window.matchMedia('(pointer: coarse)').matches;
+      if (reduce || coarse) return;
+
+      const ring = document.createElement('div');
+      ring.className = 'cursor-ring';
+      document.body.appendChild(ring);
+
+      let tx = window.innerWidth / 2;
+      let ty = window.innerHeight / 2;
+      let cx = tx;
+      let cy = ty;
+      const ease = 0.14; // lower = more trailing delay
+      let visible = false;
+
+      window.addEventListener('mousemove', (e) => {
+        tx = e.clientX;
+        ty = e.clientY;
+        if (!visible) {
+          // First move: snap to cursor so it doesn't shoot across the screen.
+          cx = tx; cy = ty;
+          ring.classList.add('is-visible');
+          visible = true;
+        }
+      }, { passive: true });
+
+      // Hide when the pointer leaves the window entirely.
+      document.addEventListener('mouseleave', () => {
+        ring.classList.remove('is-visible');
+        visible = false;
+      });
+      document.addEventListener('mouseenter', () => {
+        if (visible) ring.classList.add('is-visible');
+      });
+
+      // Expand the ring over interactive elements for a subtle hover hint.
+      const HOVER_SEL = 'a, button, .btn, .tier-card__btn, .nav-toggle, input, textarea, label, .info-card, .solution-card, .service-card, .story-card, .tier-card, .location-card, .volunteer__item';
+      document.addEventListener('mouseover', (e) => {
+        if (e.target.closest && e.target.closest(HOVER_SEL)) {
+          ring.classList.add('is-hover');
+        }
+      });
+      document.addEventListener('mouseout', (e) => {
+        if (e.target.closest && e.target.closest(HOVER_SEL)) {
+          ring.classList.remove('is-hover');
+        }
+      });
+
+      function tick() {
+        cx += (tx - cx) * ease;
+        cy += (ty - cy) * ease;
+        ring.style.transform = `translate3d(${cx}px, ${cy}px, 0)`;
+        requestAnimationFrame(tick);
+      }
       requestAnimationFrame(tick);
     })();
 

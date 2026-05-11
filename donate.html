@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Donate Now — Neuro Sciences Foundation</title>
+  <meta name="description" content="Your donation funds therapy, medication, clinics, and crisis support for those who cannot afford it. No one is turned away." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Source+Sans+3:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body class="page-donate">
+
+  <!-- ============================================================
+       SVG ICON SPRITE
+       ============================================================ -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <defs>
+      <symbol id="i-arrow" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M5 12h14m-6-7 7 7-7 7"/></symbol>
+      <symbol id="i-heart" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M12 21s-8-4.5-8-11.5A5.5 5.5 0 0 1 12 5a5.5 5.5 0 0 1 8 4.5C20 16.5 12 21 12 21z"/></symbol>
+      <symbol id="i-copy" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" d="M9 9h10v10H9z"/><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" d="M5 15V5h10"/></symbol>
+      <symbol id="i-fb" viewBox="0 0 24 24"><path fill="currentColor" d="M22 12a10 10 0 1 0-11.6 9.9V14.9H7.9V12h2.5V9.8c0-2.5 1.5-3.9 3.8-3.9 1.1 0 2.2.2 2.2.2v2.5h-1.3c-1.2 0-1.6.8-1.6 1.6V12h2.8l-.5 2.9h-2.3v7A10 10 0 0 0 22 12z"/></symbol>
+      <symbol id="i-ig" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="5" fill="none" stroke="currentColor" stroke-width="1.8"/><circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="1.8"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></symbol>
+      <symbol id="i-li" viewBox="0 0 24 24"><path fill="currentColor" d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14zM8.3 18.3v-8H5.7v8h2.6zM7 9.1a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3zm11.3 9.2v-4.4c0-2.4-1.3-3.5-3-3.5a2.6 2.6 0 0 0-2.4 1.3v-1.1H10.3v8h2.6v-4.4c0-1.2.6-1.9 1.6-1.9.9 0 1.4.6 1.4 1.9v4.4h2.4z"/></symbol>
+    </defs>
+  </svg>
+
+  <!-- ============================================================
+       HERO
+       ============================================================ -->
+  <section class="hero hero--donate">
+    <header class="site-header">
+      <div class="container header__inner">
+        <a href="index.html" class="logo" aria-label="Neuro Sciences Foundation">
+          <img class="logo__img" src="Assets%20Home%20page/Logo.png" alt="Neuro Sciences Foundation" />
+        </a>
+
+        <nav class="main-nav" aria-label="Primary">
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="index.html#our-work">Our Work</a></li>
+            <li><a href="index.html#volunteer">Get Help</a></li>
+            <li><a href="index.html#volunteer">Volunteer</a></li>
+            <li><a href="index.html#stories">Stories</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+          <a href="#donate" class="btn btn--donate main-nav__cta">
+            Donate Now
+            <svg class="btn__icon"><use href="#i-arrow"/></svg>
+          </a>
+        </nav>
+
+        <a href="#donate" class="btn btn--donate header__cta">
+          Donate Now
+          <svg class="btn__icon"><use href="#i-arrow"/></svg>
+        </a>
+
+        <button class="nav-toggle" aria-label="Open menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </header>
+
+    <div class="container hero-donate__inner">
+      <h1 class="hero-donate__title">Your donation saves lives.</h1>
+      <p class="hero-donate__lead">
+        Every rupee goes directly to therapy sessions, medication, clinic operations,
+        and mental health support for those who cannot afford it. No one is turned
+        away because they can't pay.
+      </p>
+      <p class="hero-donate__sub">Every rupee saves a life.</p>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       DONATION CARDS
+       ============================================================ -->
+  <section class="donate-list section" id="donate">
+    <div class="container">
+
+      <!-- ====== General Donations ====== -->
+      <article class="donation-card donation-card--white">
+        <div class="donation-card__left">
+          <img class="donation-card__icon" src="Donate%20Page/Green.svg" alt="">
+          <h3 class="donation-card__title">General Donations</h3>
+          <p class="donation-card__desc">For therapy, medication, clinic operations, and crisis response.</p>
+          <span class="donation-card__qr" data-seed="general" aria-label="QR code for General Donations"></span>
+        </div>
+        <div class="donation-card__right">
+          <div class="donation-card__row">
+            <div class="donation-card__field">
+              <span class="donation-card__label">ACCOUNT TITLE</span>
+              <span class="donation-card__value">NEURO-SCIENCES FOUNDATION PAKISTAN</span>
+            </div>
+            <div class="donation-card__field">
+              <span class="donation-card__label">ACCOUNT NUMBER</span>
+              <span class="donation-card__value">04200100001370</span>
+            </div>
+          </div>
+          <hr class="donation-card__rule">
+          <div class="donation-card__row">
+            <div class="donation-card__field donation-card__field--full">
+              <span class="donation-card__label">IBAN</span>
+              <span class="donation-card__value">PK24ASCM0004200100001370</span>
+            </div>
+          </div>
+          <hr class="donation-card__rule">
+          <div class="donation-card__row">
+            <div class="donation-card__field">
+              <span class="donation-card__label">BANK DETAILS</span>
+              <span class="donation-card__value">ASKARI BANK LTD DHA PHASE V BRANCH ISLAMABAD PAKISTAN (Branch Code 420)</span>
+            </div>
+            <div class="donation-card__field donation-card__field--swift">
+              <span class="donation-card__label">SWIFT:</span>
+              <span class="donation-card__value">ASCMPKKA</span>
+            </div>
+          </div>
+          <button class="donation-card__copy" type="button" data-copy='{"title":"NEURO-SCIENCES FOUNDATION PAKISTAN","account":"04200100001370","iban":"PK24ASCM0004200100001370","bank":"ASKARI BANK LTD DHA PHASE V BRANCH ISLAMABAD PAKISTAN (Branch Code 420)","swift":"ASCMPKKA"}'>
+            <svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-copy"/></svg>
+            Copy Details
+          </button>
+        </div>
+      </article>
+
+      <!-- ====== Zakat Donations (orange) ====== -->
+      <article class="donation-card donation-card--orange">
+        <div class="donation-card__left">
+          <img class="donation-card__icon" src="Donate%20Page/Black.svg" alt="">
+          <h3 class="donation-card__title">Zakat Donations</h3>
+          <p class="donation-card__desc">Fulfill your Zakat obligation. 100% distributed to eligible recipients for mental care.</p>
+          <span class="donation-card__qr" data-seed="zakat" aria-label="QR code for Zakat Donations"></span>
+        </div>
+        <div class="donation-card__right">
+          <div class="donation-card__row">
+            <div class="donation-card__field">
+              <span class="donation-card__label">ACCOUNT TITLE</span>
+              <span class="donation-card__value">NEURO-SCIENCES FOUNDATION PAKISTAN</span>
+            </div>
+            <div class="donation-card__field">
+              <span class="donation-card__label">ACCOUNT NUMBER</span>
+              <span class="donation-card__value">04200100001381</span>
+            </div>
+          </div>
+          <hr class="donation-card__rule">
+          <div class="donation-card__row">
+            <div class="donation-card__field donation-card__field--full">
+              <span class="donation-card__label">IBAN</span>
+              <span class="donation-card__value">PK18ASCM0004200100001381</span>
+            </div>
+          </div>
+          <hr class="donation-card__rule">
+          <div class="donation-card__row">
+            <div class="donation-card__field">
+              <span class="donation-card__label">BANK DETAILS</span>
+              <span class="donation-card__value">ASKARI BANK LTD, DHA PHASE V BRANCH, ISLAMABAD (Branch Code 420)</span>
+            </div>
+            <div class="donation-card__field donation-card__field--swift">
+              <span class="donation-card__label">SWIFT:</span>
+              <span class="donation-card__value">ASCMPKKA</span>
+            </div>
+          </div>
+          <button class="donation-card__copy" type="button" data-copy='{"title":"NEURO-SCIENCES FOUNDATION PAKISTAN","account":"04200100001381","iban":"PK18ASCM0004200100001381","bank":"ASKARI BANK LTD, DHA PHASE V BRANCH, ISLAMABAD (Branch Code 420)","swift":"ASCMPKKA"}'>
+            <svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-copy"/></svg>
+            Copy Details
+          </button>
+        </div>
+      </article>
+
+      <!-- ====== Sadqat Donations ====== -->
+      <article class="donation-card donation-card--white">
+        <div class="donation-card__left">
+          <img class="donation-card__icon" src="Donate%20Page/Green.svg" alt="">
+          <h3 class="donation-card__title">Sadqat Donations</h3>
+          <p class="donation-card__desc">Ongoing charity (Sadqah Jariyah) — your gift provides continued mental health support.</p>
+          <span class="donation-card__qr" data-seed="sadqat" aria-label="QR code for Sadqat Donations"></span>
+        </div>
+        <div class="donation-card__right">
+          <div class="donation-card__row">
+            <div class="donation-card__field">
+              <span class="donation-card__label">ACCOUNT TITLE</span>
+              <span class="donation-card__value">NEURO-SCIENCES FOUNDATION PAKISTAN</span>
+            </div>
+            <div class="donation-card__field">
+              <span class="donation-card__label">ACCOUNT NUMBER</span>
+              <span class="donation-card__value">04200100001392</span>
+            </div>
+          </div>
+          <hr class="donation-card__rule">
+          <div class="donation-card__row">
+            <div class="donation-card__field donation-card__field--full">
+              <span class="donation-card__label">IBAN</span>
+              <span class="donation-card__value">PK12ASCM0004200100001392</span>
+            </div>
+          </div>
+          <hr class="donation-card__rule">
+          <div class="donation-card__row">
+            <div class="donation-card__field">
+              <span class="donation-card__label">BANK DETAILS</span>
+              <span class="donation-card__value">ASKARI BANK LTD, DHA PHASE V BRANCH, ISLAMABAD (Branch Code 420)</span>
+            </div>
+            <div class="donation-card__field donation-card__field--swift">
+              <span class="donation-card__label">SWIFT:</span>
+              <span class="donation-card__value">ASCMPKKA</span>
+            </div>
+          </div>
+          <button class="donation-card__copy" type="button" data-copy='{"title":"NEURO-SCIENCES FOUNDATION PAKISTAN","account":"04200100001392","iban":"PK12ASCM0004200100001392","bank":"ASKARI BANK LTD, DHA PHASE V BRANCH, ISLAMABAD (Branch Code 420)","swift":"ASCMPKKA"}'>
+            <svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-copy"/></svg>
+            Copy Details
+          </button>
+        </div>
+      </article>
+
+    </div>
+  </section>
+
+  <!-- ============================================================
+       FOOTER
+       ============================================================ -->
+  <footer class="site-footer">
+    <div class="container">
+      <a href="index.html" class="logo logo--center site-footer__logo" aria-label="Neuro Sciences Foundation">
+        <img src="Assets%20Home%20page/Logo.png" alt="Neuro Sciences Foundation">
+      </a>
+
+      <p class="site-footer__intro">
+        At Neuro Sciences Foundation we provide high-quality mental health treatment and primary care,
+        ensuring that even the most underserved segments of the society receive the support they need.
+      </p>
+
+      <nav class="footer-nav" aria-label="Footer">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="index.html#our-work">Services</a></li>
+          <li><a href="index.html#stories">Our Team &amp; Trustees</a></li>
+          <li><a href="index.html#stories">Gallery</a></li>
+          <li><a href="index.html#contact">Contact Us</a></li>
+        </ul>
+      </nav>
+
+      <ul class="socials" aria-label="Social media">
+        <li><a href="#" aria-label="Facebook"><svg><use href="#i-fb"/></svg></a></li>
+        <li><a href="#" aria-label="Instagram"><svg><use href="#i-ig"/></svg></a></li>
+        <li><a href="#" aria-label="LinkedIn"><svg><use href="#i-li"/></svg></a></li>
+      </ul>
+
+      <p class="site-footer__copy">© Copyright 2022, All Rights Reserved by NSF Pakistan.</p>
+    </div>
+  </footer>
+
+  <script>
+    /* ---------- Hamburger ---------- */
+    document.querySelector('.nav-toggle')?.addEventListener('click', function () {
+      const open = this.getAttribute('aria-expanded') === 'true';
+      this.setAttribute('aria-expanded', String(!open));
+      document.querySelector('.main-nav').classList.toggle('is-open');
+    });
+
+    /* ---------- Generate placeholder QR-code SVGs ----------
+       Each .donation-card__qr gets a deterministic pseudo-random
+       29×29 grid filled in based on its data-seed string. Three
+       corner finder patterns are drawn at the standard positions
+       so the result reads visually as a QR code. Drop real QR
+       PNGs into the [data-seed] elements (or replace with <img>)
+       when you have them.                                        */
+    (function () {
+      const SIZE = 29;        // module grid
+      const targets = document.querySelectorAll('.donation-card__qr');
+      if (!targets.length) return;
+
+      function hash(str) {
+        let h = 2166136261 >>> 0;
+        for (let i = 0; i < str.length; i++) {
+          h ^= str.charCodeAt(i);
+          h = Math.imul(h, 16777619);
+        }
+        return h >>> 0;
+      }
+      function rng(seed) {
+        let s = seed || 1;
+        return function () {
+          s = (s * 1664525 + 1013904223) >>> 0;
+          return (s & 0xffff) / 0xffff;
+        };
+      }
+      function inFinder(x, y) {
+        // 7×7 finder patterns at the three corners
+        return (x < 7 && y < 7) ||
+               (x >= SIZE - 7 && y < 7) ||
+               (x < 7 && y >= SIZE - 7);
+      }
+      function buildSvg(seed) {
+        const rand = rng(hash(seed));
+        const cells = [];
+        for (let y = 0; y < SIZE; y++) {
+          for (let x = 0; x < SIZE; x++) {
+            if (inFinder(x, y)) continue;
+            if (rand() < 0.46) cells.push([x, y]);
+          }
+        }
+        const ns = 'http://www.w3.org/2000/svg';
+        const svg = document.createElementNS(ns, 'svg');
+        svg.setAttribute('viewBox', `0 0 ${SIZE} ${SIZE}`);
+        svg.setAttribute('shape-rendering', 'crispEdges');
+
+        // background
+        const bg = document.createElementNS(ns, 'rect');
+        bg.setAttribute('width', SIZE);
+        bg.setAttribute('height', SIZE);
+        bg.setAttribute('fill', '#fff');
+        svg.appendChild(bg);
+
+        // data dots
+        cells.forEach(([x, y]) => {
+          const r = document.createElementNS(ns, 'rect');
+          r.setAttribute('x', x);
+          r.setAttribute('y', y);
+          r.setAttribute('width', 1);
+          r.setAttribute('height', 1);
+          r.setAttribute('fill', '#000');
+          svg.appendChild(r);
+        });
+
+        // corner finder patterns
+        const corners = [[0, 0], [SIZE - 7, 0], [0, SIZE - 7]];
+        corners.forEach(([cx, cy]) => {
+          const outer = document.createElementNS(ns, 'rect');
+          outer.setAttribute('x', cx); outer.setAttribute('y', cy);
+          outer.setAttribute('width', 7); outer.setAttribute('height', 7);
+          outer.setAttribute('fill', '#000');
+          svg.appendChild(outer);
+          const inner = document.createElementNS(ns, 'rect');
+          inner.setAttribute('x', cx + 1); inner.setAttribute('y', cy + 1);
+          inner.setAttribute('width', 5); inner.setAttribute('height', 5);
+          inner.setAttribute('fill', '#fff');
+          svg.appendChild(inner);
+          const dot = document.createElementNS(ns, 'rect');
+          dot.setAttribute('x', cx + 2); dot.setAttribute('y', cy + 2);
+          dot.setAttribute('width', 3); dot.setAttribute('height', 3);
+          dot.setAttribute('fill', '#000');
+          svg.appendChild(dot);
+        });
+
+        return svg;
+      }
+
+      targets.forEach((el) => {
+        const seed = el.getAttribute('data-seed') || el.textContent || 'qr';
+        el.innerHTML = '';
+        el.appendChild(buildSvg(seed));
+      });
+    })();
+
+    /* ---------- Copy Details: copies the card's bank info ---------- */
+    (function () {
+      document.querySelectorAll('.donation-card__copy').forEach((btn) => {
+        btn.addEventListener('click', () => {
+          let data = {};
+          try { data = JSON.parse(btn.getAttribute('data-copy') || '{}'); } catch (e) {}
+          const text = [
+            data.title  ? 'Account Title: '  + data.title   : null,
+            data.account? 'Account Number: ' + data.account : null,
+            data.iban   ? 'IBAN: '           + data.iban    : null,
+            data.bank   ? 'Bank: '           + data.bank    : null,
+            data.swift  ? 'SWIFT: '          + data.swift   : null
+          ].filter(Boolean).join('\n');
+          if (!text) return;
+          if (navigator.clipboard && navigator.clipboard.writeText) {
+            navigator.clipboard.writeText(text).then(() => flash(btn, 'Copied!'));
+          } else {
+            const ta = document.createElement('textarea');
+            ta.value = text;
+            document.body.appendChild(ta);
+            ta.select();
+            try { document.execCommand('copy'); flash(btn, 'Copied!'); } catch (e) {}
+            document.body.removeChild(ta);
+          }
+        });
+      });
+      function flash(btn, msg) {
+        const original = btn.innerHTML;
+        btn.textContent = msg;
+        setTimeout(() => { btn.innerHTML = original; }, 1500);
+      }
+    })();
+
+    /* ---------- Scroll reveal (matches homepage/about) ---------- */
+    (function () {
+      const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      const sections = document.querySelectorAll('section:not(.hero)');
+
+      const FLATTEN_SELECTOR = ['.container', '.donation-card', '.donation-card__left', '.donation-card__right'].join(',');
+
+      sections.forEach((section) => {
+        section.classList.add('fade-section');
+        let targets = [section];
+        let changed = true;
+        while (changed) {
+          changed = false;
+          const next = [];
+          targets.forEach((n) => {
+            if (n.matches && n.matches(FLATTEN_SELECTOR) && n.children.length > 0) {
+              Array.from(n.children).forEach((c) => next.push(c));
+              changed = true;
+            } else {
+              next.push(n);
+            }
+          });
+          targets = next;
+        }
+        targets.forEach((child, i) => {
+          if (child === section) return;
+          child.classList.add('fade-child');
+          child.style.setProperty('--stagger-delay', `${0.05 + i * 0.07}s`);
+        });
+      });
+
+      if (reduce || !('IntersectionObserver' in window)) {
+        sections.forEach((s) => s.classList.add('in-view'));
+        return;
+      }
+      const io = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('in-view');
+            io.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0, rootMargin: '0px' });
+      sections.forEach((s) => io.observe(s));
+    })();
+
+    /* ---------- Smooth scroll (matches homepage/about) ---------- */
+    (function () {
+      const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      const coarse = window.matchMedia('(pointer: coarse)').matches;
+      if (reduce || coarse) return;
+
+      const scrollContent = document.createElement('div');
+      scrollContent.className = 'scroll-content';
+      while (document.body.firstChild) scrollContent.appendChild(document.body.firstChild);
+      document.body.appendChild(scrollContent);
+
+      const startY = window.scrollY;
+      let target = startY, current = startY;
+      const ease = 0.08;
+      function syncBodyHeight() { document.body.style.height = scrollContent.offsetHeight + 'px'; }
+      function tick() {
+        const delta = target - current;
+        if (Math.abs(delta) < 0.05) current = target;
+        else current += delta * ease;
+        scrollContent.style.transform = `translate3d(0, ${-current}px, 0)`;
+        requestAnimationFrame(tick);
+      }
+      window.addEventListener('scroll', () => { target = window.scrollY; }, { passive: true });
+      window.addEventListener('resize', syncBodyHeight);
+      if ('ResizeObserver' in window) new ResizeObserver(syncBodyHeight).observe(scrollContent);
+      syncBodyHeight();
+      if (startY > 0) window.scrollTo(0, startY);
+      requestAnimationFrame(tick);
+    })();
+
+    /* ---------- Cursor ring (matches homepage/about) ---------- */
+    (function () {
+      const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      const coarse = window.matchMedia('(pointer: coarse)').matches;
+      if (reduce || coarse) return;
+      const ring = document.createElement('div');
+      ring.className = 'cursor-ring';
+      document.body.appendChild(ring);
+      let tx = innerWidth / 2, ty = innerHeight / 2, cx = tx, cy = ty;
+      const ease = 0.14;
+      let visible = false;
+      window.addEventListener('mousemove', (e) => {
+        tx = e.clientX; ty = e.clientY;
+        if (!visible) { cx = tx; cy = ty; ring.classList.add('is-visible'); visible = true; }
+      }, { passive: true });
+      document.addEventListener('mouseleave', () => { ring.classList.remove('is-visible'); visible = false; });
+      document.addEventListener('mouseenter', () => { if (visible) ring.classList.add('is-visible'); });
+      const HOVER_SEL = 'a, button, .btn, input, textarea, label, .donation-card, .donation-card__copy, .nav-toggle';
+      document.addEventListener('mouseover', (e) => { if (e.target.closest && e.target.closest(HOVER_SEL)) ring.classList.add('is-hover'); });
+      document.addEventListener('mouseout',  (e) => { if (e.target.closest && e.target.closest(HOVER_SEL)) ring.classList.remove('is-hover'); });
+      function tick() {
+        cx += (tx - cx) * ease;
+        cy += (ty - cy) * ease;
+        ring.style.transform = `translate3d(${cx}px, ${cy}px, 0)`;
+        requestAnimationFrame(tick);
+      }
+      requestAnimationFrame(tick);
+    })();
+  </script>
+</body>
+</html>
