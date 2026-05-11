@@ -3222,14 +3222,28 @@ input, textarea, select { font: inherit; color: inherit; }
     letter-spacing: -0.6px;
   }
 
-  /* Story cards: stack before/after images vertically and give the
-     card 20px padding from left / right / top so the images sit
-     full-width with a comfortable frame. */
+  /* Story cards: keep the before/after images side-by-side in a single
+     row, with 20px padding from the card edges so the images sit on a
+     comfortable frame. */
   .story-card { padding: 20px 20px 13px 20px; }
-  .story-card__images { grid-template-columns: 1fr; gap: 12px; }
-  .story-card__arrow {
-    bottom: auto;
-    top: 50%;
-    transform: translate(-50%, -50%);
+  .story-card__images { grid-template-columns: 1fr 1fr; gap: 8px; }
+
+  /* All section / hero headings unified at 40px on mobile across every
+     page. Listed explicitly so the more-specific page-level overrides
+     are beaten. */
+  .hero__title,
+  .hero-about__title,
+  .hero-donate__title,
+  .hero-contact__title,
+  .section__title,
+  .section__title--center,
+  .section__title--light,
+  .our-story__content .section__title,
+  .different__intro .section__title,
+  .volunteer__media .section__title,
+  .end-cta .section__title {
+    font-size: 40px;
+    line-height: 1.15;
+    letter-spacing: -1.2px;
   }
 }
