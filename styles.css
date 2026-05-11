@@ -1455,7 +1455,7 @@ input, textarea, select { font: inherit; color: inherit; }
   .training__float { width: 95px; }
 }
 @media (max-width: 767px) {
-  .training__text { font-size: 28px; line-height: 36px; letter-spacing: -1px; }
+  .training__text { font-size: 30px; line-height: 38px; letter-spacing: -1px; }
   .training__float { width: 75px; }
   .training__float--1 { left: 0; top: 0; }
   .training__float--2 { right: 0; top: 30px; }
@@ -1994,7 +1994,7 @@ input, textarea, select { font: inherit; color: inherit; }
   /* Locations */
   .location-card h3 { font-size: 22px; line-height: 28px; letter-spacing: -1px; }
 
-  .mission__text { font-size: 28px; line-height: 36px; letter-spacing: -1px; }
+  .mission__text { font-size: 35px; line-height: 44px; letter-spacing: -1.4px; }
 
   /* Awareness floats positioned tighter on small screens */
   .training__float--1 { top: 0; left: -10px; }
@@ -2605,9 +2605,16 @@ input, textarea, select { font: inherit; color: inherit; }
   .values__grid { grid-template-columns: 1fr; gap: var(--sp-4); }
   .value-card { padding: var(--sp-5); }
 
-  .different-card { padding: var(--sp-4); }
-  .different-card h3 { font-size: 17px; }
-  .different-card p { font-size: 13px; line-height: 20px; }
+  /* Cards span the full available width with 20px from the page edges
+     on each side, with comfortable inner padding. */
+  .different .container { padding: 0 20px; }
+  .different-card {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 24px 22px;
+  }
+  .different-card h3 { font-size: 22px; }
+  .different-card p { font-size: 15px; line-height: 24px; }
 
   .recognition__grid { grid-template-columns: 1fr; }
   .recognition__cell { padding: var(--sp-4); }
@@ -3166,4 +3173,63 @@ input, textarea, select { font: inherit; color: inherit; }
 
 @media (max-width: 374px) {
   .hero-contact__title { font-size: 24px; }
+}
+
+/* =====================================================
+   Mobile: normalize all body / descriptive text to 18px
+   ===================================================== */
+@media (max-width: 767px) {
+  .hero__lead,
+  .hero-about__lead,
+  .hero-donate__lead,
+  .hero-contact__lead,
+  .section__lead,
+  .solution-card p,
+  .service-card p,
+  .value-card p,
+  .different-card p,
+  .story-card__excerpt,
+  .story-card__cta-sub,
+  .our-story__content p,
+  .our-story__highlight,
+  .our-story__quote,
+  .location-card p,
+  .help-cta__lead,
+  .help-cta__hope,
+  .contact__details p,
+  .donation-card__desc,
+  .recognition__cell span,
+  .recognition__quote,
+  .clinic-card__addr,
+  .site-footer__intro,
+  .tier-card p {
+    font-size: 18px;
+    line-height: 1.5;
+  }
+
+  /* Card headings — same size for every card variant across the site */
+  .solution-card h3,
+  .service-card h3,
+  .value-card h3,
+  .different-card h3,
+  .story-card h3,
+  .location-card h3,
+  .donation-card__title,
+  .clinic-card h3,
+  .info-card__title {
+    font-size: 22px;
+    line-height: 1.3;
+    letter-spacing: -0.6px;
+  }
+
+  /* Story cards: stack before/after images vertically and give the
+     card 20px padding from left / right / top so the images sit
+     full-width with a comfortable frame. */
+  .story-card { padding: 20px 20px 13px 20px; }
+  .story-card__images { grid-template-columns: 1fr; gap: 12px; }
+  .story-card__arrow {
+    bottom: auto;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
 }
