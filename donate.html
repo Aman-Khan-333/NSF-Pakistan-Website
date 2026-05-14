@@ -86,7 +86,7 @@
           <img class="donation-card__icon" src="Donate%20Page/Green.svg" alt="">
           <h3 class="donation-card__title">General Donations</h3>
           <p class="donation-card__desc">For therapy, medication, clinic operations, and crisis response.</p>
-          <span class="donation-card__qr" data-seed="general" aria-label="QR code for General Donations"></span>
+          <img class="donation-card__qr" src="Assets%20Home%20page/Donation%20Page/General.png" alt="QR code for General Donations">
         </div>
         <div class="donation-card__right">
           <div class="donation-card__row">
@@ -130,7 +130,7 @@
           <img class="donation-card__icon" src="Donate%20Page/Black.svg" alt="">
           <h3 class="donation-card__title">Zakat Donations</h3>
           <p class="donation-card__desc">Fulfill your Zakat obligation. 100% distributed to eligible recipients for mental care.</p>
-          <span class="donation-card__qr" data-seed="zakat" aria-label="QR code for Zakat Donations"></span>
+          <img class="donation-card__qr" src="Assets%20Home%20page/Donation%20Page/zakat.png" alt="QR code for Zakat Donations">
         </div>
         <div class="donation-card__right">
           <div class="donation-card__row">
@@ -174,7 +174,7 @@
           <img class="donation-card__icon" src="Donate%20Page/Green.svg" alt="">
           <h3 class="donation-card__title">Sadqat Donations</h3>
           <p class="donation-card__desc">Ongoing charity (Sadqah Jariyah) — your gift provides continued mental health support.</p>
-          <span class="donation-card__qr" data-seed="sadqat" aria-label="QR code for Sadqat Donations"></span>
+          <img class="donation-card__qr" src="Assets%20Home%20page/Donation%20Page/Sadqat.png" alt="QR code for Sadqat Donations">
         </div>
         <div class="donation-card__right">
           <div class="donation-card__row">
@@ -257,101 +257,6 @@
       this.setAttribute('aria-expanded', String(!open));
       document.querySelector('.main-nav').classList.toggle('is-open');
     });
-
-    /* ---------- Generate placeholder QR-code SVGs ----------
-       Each .donation-card__qr gets a deterministic pseudo-random
-       29×29 grid filled in based on its data-seed string. Three
-       corner finder patterns are drawn at the standard positions
-       so the result reads visually as a QR code. Drop real QR
-       PNGs into the [data-seed] elements (or replace with <img>)
-       when you have them.                                        */
-    (function () {
-      const SIZE = 29;        // module grid
-      const targets = document.querySelectorAll('.donation-card__qr');
-      if (!targets.length) return;
-
-      function hash(str) {
-        let h = 2166136261 >>> 0;
-        for (let i = 0; i < str.length; i++) {
-          h ^= str.charCodeAt(i);
-          h = Math.imul(h, 16777619);
-        }
-        return h >>> 0;
-      }
-      function rng(seed) {
-        let s = seed || 1;
-        return function () {
-          s = (s * 1664525 + 1013904223) >>> 0;
-          return (s & 0xffff) / 0xffff;
-        };
-      }
-      function inFinder(x, y) {
-        // 7×7 finder patterns at the three corners
-        return (x < 7 && y < 7) ||
-               (x >= SIZE - 7 && y < 7) ||
-               (x < 7 && y >= SIZE - 7);
-      }
-      function buildSvg(seed) {
-        const rand = rng(hash(seed));
-        const cells = [];
-        for (let y = 0; y < SIZE; y++) {
-          for (let x = 0; x < SIZE; x++) {
-            if (inFinder(x, y)) continue;
-            if (rand() < 0.46) cells.push([x, y]);
-          }
-        }
-        const ns = 'http://www.w3.org/2000/svg';
-        const svg = document.createElementNS(ns, 'svg');
-        svg.setAttribute('viewBox', `0 0 ${SIZE} ${SIZE}`);
-        svg.setAttribute('shape-rendering', 'crispEdges');
-
-        // background
-        const bg = document.createElementNS(ns, 'rect');
-        bg.setAttribute('width', SIZE);
-        bg.setAttribute('height', SIZE);
-        bg.setAttribute('fill', '#fff');
-        svg.appendChild(bg);
-
-        // data dots
-        cells.forEach(([x, y]) => {
-          const r = document.createElementNS(ns, 'rect');
-          r.setAttribute('x', x);
-          r.setAttribute('y', y);
-          r.setAttribute('width', 1);
-          r.setAttribute('height', 1);
-          r.setAttribute('fill', '#000');
-          svg.appendChild(r);
-        });
-
-        // corner finder patterns
-        const corners = [[0, 0], [SIZE - 7, 0], [0, SIZE - 7]];
-        corners.forEach(([cx, cy]) => {
-          const outer = document.createElementNS(ns, 'rect');
-          outer.setAttribute('x', cx); outer.setAttribute('y', cy);
-          outer.setAttribute('width', 7); outer.setAttribute('height', 7);
-          outer.setAttribute('fill', '#000');
-          svg.appendChild(outer);
-          const inner = document.createElementNS(ns, 'rect');
-          inner.setAttribute('x', cx + 1); inner.setAttribute('y', cy + 1);
-          inner.setAttribute('width', 5); inner.setAttribute('height', 5);
-          inner.setAttribute('fill', '#fff');
-          svg.appendChild(inner);
-          const dot = document.createElementNS(ns, 'rect');
-          dot.setAttribute('x', cx + 2); dot.setAttribute('y', cy + 2);
-          dot.setAttribute('width', 3); dot.setAttribute('height', 3);
-          dot.setAttribute('fill', '#000');
-          svg.appendChild(dot);
-        });
-
-        return svg;
-      }
-
-      targets.forEach((el) => {
-        const seed = el.getAttribute('data-seed') || el.textContent || 'qr';
-        el.innerHTML = '';
-        el.appendChild(buildSvg(seed));
-      });
-    })();
 
     /* ---------- Copy Details: copies the card's bank info ---------- */
     (function () {
