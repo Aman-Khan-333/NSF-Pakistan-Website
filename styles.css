@@ -460,7 +460,7 @@ input, textarea, select { font: inherit; color: inherit; }
       rgba(0,0,0,0.15) 40%,
       rgba(0,0,0,0.30) 75%,
       rgba(0,0,0,0.75) 100%),
-    url("Assets Home page/Hero Section Image 2.png");
+    url("Assets Home page/Hero Section Image 2.jpg");
   background-size: cover, cover;
   background-position: center, center top;
   background-repeat: no-repeat, no-repeat;
@@ -2037,7 +2037,7 @@ input, textarea, select { font: inherit; color: inherit; }
       rgba(0,0,0,0.30) 40%,
       rgba(0,0,0,0.45) 75%,
       rgba(0,0,0,0.78) 100%),
-    url('About%20us/Hero%20Section.png') center / cover no-repeat,
+    url('About%20us/Hero%20Section.jpg') center / cover no-repeat,
     #0b0b0b;
   /* Center the title + lead + stats vertically inside the min-height. */
   display: flex;
@@ -2650,7 +2650,7 @@ input, textarea, select { font: inherit; color: inherit; }
       rgba(0,0,0,0.30) 40%,
       rgba(0,0,0,0.45) 75%,
       rgba(0,0,0,0.78) 100%),
-    url('Assets%20Home%20page/Hero%20Section%20Image%202.png') center / cover no-repeat,
+    url('Assets%20Home%20page/Hero%20Section%20Image%202.jpg') center / cover no-repeat,
     #0b0b0b;
   display: flex;
   flex-direction: column;
