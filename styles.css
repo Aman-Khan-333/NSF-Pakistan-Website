@@ -975,6 +975,7 @@ input, textarea, select { font: inherit; color: inherit; }
   width: 187px;
   height: 192px;
   max-width: 100%;
+  min-width: 0;
   border-radius: 12px;
   overflow: hidden;
 }
@@ -2771,6 +2772,11 @@ input, textarea, select { font: inherit; color: inherit; }
   object-fit: contain;
   flex-shrink: 0;
 }
+/* Recolour the Fauji Foundation logo to red. */
+.recognition__logo--red {
+  filter: brightness(0) saturate(100%) invert(16%) sepia(96%)
+    saturate(6932%) hue-rotate(1deg) brightness(94%) contrast(118%);
+}
 .recognition__cell span {
   font-family: 'Inter', sans-serif;
   font-size: 15px;
@@ -4184,6 +4190,13 @@ input, textarea, select { font: inherit; color: inherit; }
       rgba(0,0,0,0.75) 100%);
 }
 .hero--gallery > .container { position: relative; z-index: 2; }
+
+/* Stories page: its own black-and-white, darkened hero photo. */
+.page-stories .hero--gallery::before {
+  background-image: url('Stories%20Image.png');
+  filter: grayscale(100%) brightness(0.5) contrast(1.05);
+}
+
 .hero-gallery__inner { z-index: auto; }
 .hero-gallery__title,
 .hero-gallery__lead,
