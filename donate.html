@@ -23,6 +23,8 @@
       <symbol id="i-fb" viewBox="0 0 24 24"><path fill="currentColor" d="M22 12a10 10 0 1 0-11.6 9.9V14.9H7.9V12h2.5V9.8c0-2.5 1.5-3.9 3.8-3.9 1.1 0 2.2.2 2.2.2v2.5h-1.3c-1.2 0-1.6.8-1.6 1.6V12h2.8l-.5 2.9h-2.3v7A10 10 0 0 0 22 12z"/></symbol>
       <symbol id="i-ig" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="5" fill="none" stroke="currentColor" stroke-width="1.8"/><circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="1.8"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></symbol>
       <symbol id="i-li" viewBox="0 0 24 24"><path fill="currentColor" d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14zM8.3 18.3v-8H5.7v8h2.6zM7 9.1a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3zm11.3 9.2v-4.4c0-2.4-1.3-3.5-3-3.5a2.6 2.6 0 0 0-2.4 1.3v-1.1H10.3v8h2.6v-4.4c0-1.2.6-1.9 1.6-1.9.9 0 1.4.6 1.4 1.9v4.4h2.4z"/></symbol>
+      <symbol id="i-tiktok" viewBox="0 0 24 24"><path fill="currentColor" d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 1 1 3.19-4.78V8.13a6.84 6.84 0 0 0-1-.07A6.34 6.34 0 0 0 5.8 20.1a6.34 6.34 0 0 0 10.86-4.43V8.27a8.16 8.16 0 0 0 4.77 1.52v-3.4a4.85 4.85 0 0 1-1.84-.1z"/></symbol>
+      <symbol id="i-x" viewBox="0 0 24 24"><path fill="currentColor" d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></symbol>
     </defs>
   </svg>
 
@@ -40,10 +42,8 @@
           <ul>
             <li><a href="index.html">Home</a></li>
             <li><a href="about.html">About</a></li>
-            <li><a href="index.html#our-work">Our Work</a></li>
-            <li><a href="index.html#volunteer">Get Help</a></li>
-            <li><a href="index.html#volunteer">Volunteer</a></li>
-            <li><a href="index.html#stories">Stories</a></li>
+            <li><a href="stories.html">Stories</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
             <li><a href="contact.html">Contact</a></li>
           </ul>
           <a href="#donate" class="btn btn--donate main-nav__cta">
@@ -232,18 +232,19 @@
       <nav class="footer-nav" aria-label="Footer">
         <ul>
           <li><a href="index.html">Home</a></li>
-          <li><a href="about.html">About Us</a></li>
-          <li><a href="index.html#our-work">Services</a></li>
-          <li><a href="index.html#stories">Our Team &amp; Trustees</a></li>
-          <li><a href="index.html#stories">Gallery</a></li>
-          <li><a href="index.html#contact">Contact Us</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="stories.html">Stories</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="contact.html">Contact</a></li>
         </ul>
       </nav>
 
       <ul class="socials" aria-label="Social media">
-        <li><a href="#" aria-label="Facebook"><svg><use href="#i-fb"/></svg></a></li>
-        <li><a href="#" aria-label="Instagram"><svg><use href="#i-ig"/></svg></a></li>
-        <li><a href="#" aria-label="LinkedIn"><svg><use href="#i-li"/></svg></a></li>
+        <li><a href="https://www.facebook.com/people/Neuro-Sciences-Foundation/61589567104282/" target="_blank" rel="noopener" aria-label="Facebook"><svg><use href="#i-fb"/></svg></a></li>
+        <li><a href="https://www.instagram.com/neuro_sciences_foundation" target="_blank" rel="noopener" aria-label="Instagram"><svg><use href="#i-ig"/></svg></a></li>
+        <li><a href="https://www.tiktok.com/@nsf_pakistan" target="_blank" rel="noopener" aria-label="TikTok"><svg><use href="#i-tiktok"/></svg></a></li>
+        <li><a href="https://x.com/nsf_pakistann?s=20" target="_blank" rel="noopener" aria-label="X (Twitter)"><svg><use href="#i-x"/></svg></a></li>
+        <li><a href="https://www.linkedin.com/company/121993945/" target="_blank" rel="noopener" aria-label="LinkedIn"><svg><use href="#i-li"/></svg></a></li>
       </ul>
 
       <p class="site-footer__copy">© Copyright 2022, All Rights Reserved by NSF Pakistan.</p>
@@ -345,8 +346,18 @@
 
       const scrollContent = document.createElement('div');
       scrollContent.className = 'scroll-content';
-      while (document.body.firstChild) scrollContent.appendChild(document.body.firstChild);
+      const PIN_OUT = ['#scrollPopup'];
+      const pinned = [];
+      PIN_OUT.forEach((sel) => {
+        const el = document.querySelector(sel);
+        if (el) pinned.push(el);
+      });
+      Array.from(document.body.childNodes).forEach((node) => {
+        if (pinned.includes(node)) return;
+        scrollContent.appendChild(node);
+      });
       document.body.appendChild(scrollContent);
+      pinned.forEach((el) => document.body.appendChild(el));
 
       const startY = window.scrollY;
       let target = startY, current = startY;

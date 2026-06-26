@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Gallery — Neuro Sciences Foundation</title>
+  <meta name="description" content="See NSF in action — our clinics, training programmes, and special schools across Pakistan." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Source+Sans+3:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body class="page-gallery">
+
+  <!-- SVG icon sprite -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <defs>
+      <symbol id="i-arrow" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M5 12h14m-6-7 7 7-7 7"/></symbol>
+      <symbol id="i-fb" viewBox="0 0 24 24"><path fill="currentColor" d="M22 12a10 10 0 1 0-11.6 9.9V14.9H7.9V12h2.5V9.8c0-2.5 1.5-3.9 3.8-3.9 1.1 0 2.2.2 2.2.2v2.5h-1.3c-1.2 0-1.6.8-1.6 1.6V12h2.8l-.5 2.9h-2.3v7A10 10 0 0 0 22 12z"/></symbol>
+      <symbol id="i-ig" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="5" fill="none" stroke="currentColor" stroke-width="1.8"/><circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="1.8"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></symbol>
+      <symbol id="i-li" viewBox="0 0 24 24"><path fill="currentColor" d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14zM8.3 18.3v-8H5.7v8h2.6zM7 9.1a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3zm11.3 9.2v-4.4c0-2.4-1.3-3.5-3-3.5a2.6 2.6 0 0 0-2.4 1.3v-1.1H10.3v8h2.6v-4.4c0-1.2.6-1.9 1.6-1.9.9 0 1.4.6 1.4 1.9v4.4h2.4z"/></symbol>
+      <symbol id="i-tiktok" viewBox="0 0 24 24"><path fill="currentColor" d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 1 1 3.19-4.78V8.13a6.84 6.84 0 0 0-1-.07A6.34 6.34 0 0 0 5.8 20.1a6.34 6.34 0 0 0 10.86-4.43V8.27a8.16 8.16 0 0 0 4.77 1.52v-3.4a4.85 4.85 0 0 1-1.84-.1z"/></symbol>
+      <symbol id="i-x" viewBox="0 0 24 24"><path fill="currentColor" d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></symbol>
+    </defs>
+  </svg>
+
+  <!-- HERO -->
+  <section class="hero hero--gallery">
+    <header class="site-header">
+      <div class="container header__inner">
+        <a href="index.html" class="logo" aria-label="Neuro Sciences Foundation">
+          <img class="logo__img" src="Assets%20Home%20page/Logo.png" alt="Neuro Sciences Foundation" />
+        </a>
+
+        <nav class="main-nav" aria-label="Primary">
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="stories.html">Stories</a></li>
+            <li><a href="gallery.html" class="is-active">Gallery</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+          <a href="donate.html" class="btn btn--donate main-nav__cta">
+            Donate Now
+            <svg class="btn__icon"><use href="#i-arrow"/></svg>
+          </a>
+        </nav>
+
+        <a href="donate.html" class="btn btn--donate header__cta">
+          Donate Now
+          <svg class="btn__icon"><use href="#i-arrow"/></svg>
+        </a>
+
+        <button class="nav-toggle" aria-label="Open menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </header>
+
+    <div class="container hero-gallery__inner">
+      <h1 class="hero-gallery__title">
+        Our Work in Pictures.<br>
+        A Closer Look at NSF.
+      </h1>
+      <p class="hero-gallery__lead">
+        A look inside our clinics, training programmes, and special schools &mdash;
+        where care, compassion, and learning come together every day.
+      </p>
+      <p class="hero-gallery__sub">Real people. Real care. Real change.</p>
+    </div>
+  </section>
+
+  <!-- CLINICS -->
+  <section class="gallery-category section" id="clinics">
+    <div class="container">
+      <div class="gallery-category__head">
+        <p class="eyebrow">Clinics</p>
+        <h2 class="section__title">Free Care, Close to Home</h2>
+        <p class="section__lead">Free psychiatric consultations, counselling, and medication &mdash; close to home.</p>
+      </div>
+
+      <div class="gallery-grid" data-gallery>
+        <button class="gallery-item" type="button" data-img="Gallery%20page/Set%202/WhatsApp%20Image%202026-06-25%20at%204.01.10%20PM.jpeg"><img src="Gallery%20page/Set%202/WhatsApp%20Image%202026-06-25%20at%204.01.10%20PM.jpeg" alt="Clinic"></button>
+        <button class="gallery-item" type="button" data-img="Gallery%20page/Set%202/WhatsApp%20Image%202026-06-25%20at%204.01.10%20PM%20(1).jpeg"><img src="Gallery%20page/Set%202/WhatsApp%20Image%202026-06-25%20at%204.01.10%20PM%20(1).jpeg" alt="Clinic"></button>
+        <button class="gallery-item" type="button" data-img="Gallery%20page/Set%202/WhatsApp%20Image%202026-06-25%20at%204.01.10%20PM%20(2).jpeg"><img src="Gallery%20page/Set%202/WhatsApp%20Image%202026-06-25%20at%204.01.10%20PM%20(2).jpeg" alt="Clinic"></button>
+        <button class="gallery-item" type="button" data-img="Gallery%20page/Set%202/WhatsApp%20Image%202026-06-25%20at%204.01.11%20PM.jpeg"><img src="Gallery%20page/Set%202/WhatsApp%20Image%202026-06-25%20at%204.01.11%20PM.jpeg" alt="Clinic"></button>
+        <button class="gallery-item" type="button" data-img="Gallery%20page/Set%202/WhatsApp%20Image%202026-06-25%20at%204.01.11%20PM%20(1).jpeg"><img src="Gallery%20page/Set%202/WhatsApp%20Image%202026-06-25%20at%204.01.11%20PM%20(1).jpeg" alt="Clinic"></button>
+        <button class="gallery-item" type="button" data-img="Gallery%20page/Set%202/WhatsApp%20Image%202026-06-25%20at%204.01.12%20PM.jpeg"><img src="Gallery%20page/Set%202/WhatsApp%20Image%202026-06-25%20at%204.01.12%20PM.jpeg" alt="Clinic"></button>
+        <button class="gallery-item" type="button" data-img="Gallery%20page/Set%202/WhatsApp%20Image%202026-06-25%20at%204.01.12%20PM%20(1).jpeg"><img src="Gallery%20page/Set%202/WhatsApp%20Image%202026-06-25%20at%204.01.12%20PM%20(1).jpeg" alt="Clinic"></button>
+        <button class="gallery-item" type="button" data-img="Contact%20us%20Page/Carousel%20images/21-768x543.png"><img src="Contact%20us%20Page/Carousel%20images/21-768x543.png" alt="Clinic"></button>
+        <button class="gallery-item" type="button" data-img="Contact%20us%20Page/Carousel%20images/33-1-768x543.png"><img src="Contact%20us%20Page/Carousel%20images/33-1-768x543.png" alt="Clinic"></button>
+        <button class="gallery-item" type="button" data-img="Contact%20us%20Page/Carousel%20images/34-768x543.png"><img src="Contact%20us%20Page/Carousel%20images/34-768x543.png" alt="Clinic"></button>
+        <button class="gallery-item" type="button" data-img="Contact%20us%20Page/Carousel%20images/35-768x543.png"><img src="Contact%20us%20Page/Carousel%20images/35-768x543.png" alt="Clinic"></button>
+        <button class="gallery-item" type="button" data-img="Contact%20us%20Page/Carousel%20images/46-768x543.png"><img src="Contact%20us%20Page/Carousel%20images/46-768x543.png" alt="Clinic"></button>
+        <button class="gallery-item" type="button" data-img="Contact%20us%20Page/Carousel%20images/37-768x543.png"><img src="Contact%20us%20Page/Carousel%20images/37-768x543.png" alt="Clinic"></button>
+        <button class="gallery-item" type="button" data-img="Contact%20us%20Page/Carousel%20images/39-768x543.png"><img src="Contact%20us%20Page/Carousel%20images/39-768x543.png" alt="Clinic"></button>
+        <button class="gallery-item" type="button" data-img="Contact%20us%20Page/Carousel%20images/50-2048x1448.png"><img src="Contact%20us%20Page/Carousel%20images/50-2048x1448.png" alt="Clinic"></button>
+        <button class="gallery-item" type="button" data-img="Contact%20us%20Page/Carousel%20images/51-2048x1448.png"><img src="Contact%20us%20Page/Carousel%20images/51-2048x1448.png" alt="Clinic"></button>
+      </div>
+    </div>
+  </section>
+
+  <!-- TRAINING -->
+  <section class="gallery-category gallery-category--alt section" id="training">
+    <div class="container">
+      <div class="gallery-category__head">
+        <p class="eyebrow">Training</p>
+        <h2 class="section__title">Equipping the Frontline</h2>
+        <p class="section__lead">Training GPs, nurses, teachers, and community workers as mental-health first responders.</p>
+      </div>
+
+      <div class="gallery-grid" data-gallery>
+        <button class="gallery-item" type="button" data-img="Gallery%20page/Trainings/WhatsApp%20Image%202026-06-25%20at%203.47.22%20PM.jpeg"><img src="Gallery%20page/Trainings/WhatsApp%20Image%202026-06-25%20at%203.47.22%20PM.jpeg" alt="Training"></button>
+        <button class="gallery-item" type="button" data-img="Gallery%20page/Trainings/WhatsApp%20Image%202026-06-25%20at%203.47.24%20PM.jpeg"><img src="Gallery%20page/Trainings/WhatsApp%20Image%202026-06-25%20at%203.47.24%20PM.jpeg" alt="Training"></button>
+        <button class="gallery-item" type="button" data-img="Gallery%20page/Trainings/WhatsApp%20Image%202026-06-25%20at%203.47.24%20PM%20(1).jpeg"><img src="Gallery%20page/Trainings/WhatsApp%20Image%202026-06-25%20at%203.47.24%20PM%20(1).jpeg" alt="Training"></button>
+        <button class="gallery-item" type="button" data-img="Gallery%20page/Trainings/WhatsApp%20Image%202026-06-25%20at%203.47.24%20PM%20(2).jpeg"><img src="Gallery%20page/Trainings/WhatsApp%20Image%202026-06-25%20at%203.47.24%20PM%20(2).jpeg" alt="Training"></button>
+        <button class="gallery-item" type="button" data-img="Gallery%20page/Trainings/WhatsApp%20Image%202026-06-25%20at%203.47.25%20PM.jpeg"><img src="Gallery%20page/Trainings/WhatsApp%20Image%202026-06-25%20at%203.47.25%20PM.jpeg" alt="Training"></button>
+        <button class="gallery-item" type="button" data-img="Gallery%20page/Trainings/WhatsApp%20Image%202026-06-25%20at%203.47.25%20PM%20(1).jpeg"><img src="Gallery%20page/Trainings/WhatsApp%20Image%202026-06-25%20at%203.47.25%20PM%20(1).jpeg" alt="Training"></button>
+        <button class="gallery-item" type="button" data-img="Gallery%20page/Trainings/WhatsApp%20Image%202026-06-25%20at%203.47.25%20PM%20(2).jpeg"><img src="Gallery%20page/Trainings/WhatsApp%20Image%202026-06-25%20at%203.47.25%20PM%20(2).jpeg" alt="Training"></button>
+        <button class="gallery-item" type="button" data-img="Gallery%20page/Trainings/WhatsApp%20Image%202026-06-25%20at%203.47.26%20PM.jpeg"><img src="Gallery%20page/Trainings/WhatsApp%20Image%202026-06-25%20at%203.47.26%20PM.jpeg" alt="Training"></button>
+        <button class="gallery-item" type="button" data-img="Gallery%20page/Trainings/WhatsApp%20Image%202026-06-25%20at%203.47.26%20PM%20(1).jpeg"><img src="Gallery%20page/Trainings/WhatsApp%20Image%202026-06-25%20at%203.47.26%20PM%20(1).jpeg" alt="Training"></button>
+        <button class="gallery-item" type="button" data-img="Gallery%20page/Trainings/WhatsApp%20Image%202026-06-25%20at%203.47.26%20PM%20(2).jpeg"><img src="Gallery%20page/Trainings/WhatsApp%20Image%202026-06-25%20at%203.47.26%20PM%20(2).jpeg" alt="Training"></button>
+        <button class="gallery-item" type="button" data-img="Gallery%20page/Trainings/WhatsApp%20Image%202026-06-25%20at%203.47.27%20PM.jpeg"><img src="Gallery%20page/Trainings/WhatsApp%20Image%202026-06-25%20at%203.47.27%20PM.jpeg" alt="Training"></button>
+        <button class="gallery-item" type="button" data-img="Contact%20us%20Page/Carousel%20images/69-768x543.png"><img src="Contact%20us%20Page/Carousel%20images/69-768x543.png" alt="Training"></button>
+        <button class="gallery-item" type="button" data-img="Contact%20us%20Page/Carousel%20images/70-768x543.png"><img src="Contact%20us%20Page/Carousel%20images/70-768x543.png" alt="Training"></button>
+        <button class="gallery-item" type="button" data-img="Contact%20us%20Page/Carousel%20images/71-768x543.png"><img src="Contact%20us%20Page/Carousel%20images/71-768x543.png" alt="Training"></button>
+        <button class="gallery-item" type="button" data-img="Contact%20us%20Page/Carousel%20images/72-768x543.png"><img src="Contact%20us%20Page/Carousel%20images/72-768x543.png" alt="Training"></button>
+        <button class="gallery-item" type="button" data-img="Contact%20us%20Page/Carousel%20images/73-768x543.png"><img src="Contact%20us%20Page/Carousel%20images/73-768x543.png" alt="Training"></button>
+      </div>
+    </div>
+  </section>
+
+  <!-- SPECIAL SCHOOLS -->
+  <section class="gallery-category section" id="schools">
+    <div class="container">
+      <div class="gallery-category__head">
+        <p class="eyebrow">Special Schools</p>
+        <h2 class="section__title">Learning Without Limits</h2>
+        <p class="section__lead">Individualised education, therapy, and family support &mdash; in a safe, structured environment.</p>
+      </div>
+
+      <div class="gallery-grid" data-gallery>
+        <button class="gallery-item" type="button" data-img="Gallery%20page/Set%203/WhatsApp%20Image%202026-06-25%20at%204.15.06%20PM.jpeg"><img src="Gallery%20page/Set%203/WhatsApp%20Image%202026-06-25%20at%204.15.06%20PM.jpeg" alt="Special school"></button>
+        <button class="gallery-item" type="button" data-img="Gallery%20page/Set%203/WhatsApp%20Image%202026-06-25%20at%204.15.17%20PM.jpeg"><img src="Gallery%20page/Set%203/WhatsApp%20Image%202026-06-25%20at%204.15.17%20PM.jpeg" alt="Special school"></button>
+        <button class="gallery-item" type="button" data-img="Gallery%20page/Set%203/WhatsApp%20Image%202026-06-25%20at%204.17.19%20PM.jpeg"><img src="Gallery%20page/Set%203/WhatsApp%20Image%202026-06-25%20at%204.17.19%20PM.jpeg" alt="Special school"></button>
+        <button class="gallery-item" type="button" data-img="Gallery%20page/Set%203/WhatsApp%20Image%202026-06-25%20at%204.17.30%20PM.jpeg"><img src="Gallery%20page/Set%203/WhatsApp%20Image%202026-06-25%20at%204.17.30%20PM.jpeg" alt="Special school"></button>
+        <button class="gallery-item" type="button" data-img="Gallery%20page/Set%203/WhatsApp%20Image%202026-06-25%20at%204.17.56%20PM.jpeg"><img src="Gallery%20page/Set%203/WhatsApp%20Image%202026-06-25%20at%204.17.56%20PM.jpeg" alt="Special school"></button>
+        <button class="gallery-item" type="button" data-img="Gallery%20page/Set%203/WhatsApp%20Image%202026-06-26%20at%206.50.29%20PM.jpeg"><img src="Gallery%20page/Set%203/WhatsApp%20Image%202026-06-26%20at%206.50.29%20PM.jpeg" alt="Special school"></button>
+        <button class="gallery-item" type="button" data-img="Gallery%20page/Set%203/WhatsApp%20Image%202026-06-26%20at%206.56.16%20PM%20(1).jpeg"><img src="Gallery%20page/Set%203/WhatsApp%20Image%202026-06-26%20at%206.56.16%20PM%20(1).jpeg" alt="Special school"></button>
+        <button class="gallery-item" type="button" data-img="Gallery%20page/Set%203/WhatsApp%20Image%202026-06-26%20at%206.56.17%20PM%20(2).jpeg"><img src="Gallery%20page/Set%203/WhatsApp%20Image%202026-06-26%20at%206.56.17%20PM%20(2).jpeg" alt="Special school"></button>
+        <button class="gallery-item" type="button" data-img="Gallery%20page/Set%203/WhatsApp%20Image%202026-06-26%20at%206.56.18%20PM.jpeg"><img src="Gallery%20page/Set%203/WhatsApp%20Image%202026-06-26%20at%206.56.18%20PM.jpeg" alt="Special school"></button>
+        <button class="gallery-item" type="button" data-img="Gallery%20page/Set%203/WhatsApp%20Image%202026-06-26%20at%206.56.18%20PM%20(1).jpeg"><img src="Gallery%20page/Set%203/WhatsApp%20Image%202026-06-26%20at%206.56.18%20PM%20(1).jpeg" alt="Special school"></button>
+        <button class="gallery-item" type="button" data-img="Gallery%20page/Set%203/WhatsApp%20Image%202026-06-26%20at%206.56.18%20PM%20(2).jpeg"><img src="Gallery%20page/Set%203/WhatsApp%20Image%202026-06-26%20at%206.56.18%20PM%20(2).jpeg" alt="Special school"></button>
+        <button class="gallery-item" type="button" data-img="Gallery%20page/Set%203/WhatsApp%20Image%202026-06-26%20at%206.56.19%20PM.jpeg"><img src="Gallery%20page/Set%203/WhatsApp%20Image%202026-06-26%20at%206.56.19%20PM.jpeg" alt="Special school"></button>
+        <button class="gallery-item" type="button" data-img="Gallery%20page/Set%203/WhatsApp%20Image%202026-06-26%20at%206.56.19%20PM%20(1).jpeg"><img src="Gallery%20page/Set%203/WhatsApp%20Image%202026-06-26%20at%206.56.19%20PM%20(1).jpeg" alt="Special school"></button>
+        <button class="gallery-item" type="button" data-img="Gallery%20page/Set%203/WhatsApp%20Image%202026-06-26%20at%206.56.19%20PM%20(2).jpeg"><img src="Gallery%20page/Set%203/WhatsApp%20Image%202026-06-26%20at%206.56.19%20PM%20(2).jpeg" alt="Special school"></button>
+        <button class="gallery-item" type="button" data-img="Gallery%20page/Set%203/WhatsApp%20Image%202026-06-26%20at%206.56.20%20PM.jpeg"><img src="Gallery%20page/Set%203/WhatsApp%20Image%202026-06-26%20at%206.56.20%20PM.jpeg" alt="Special school"></button>
+      </div>
+    </div>
+  </section>
+
+  <!-- LIGHTBOX -->
+  <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Image viewer" hidden>
+    <button class="lightbox__close" type="button" aria-label="Close">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" d="M6 6l12 12M18 6L6 18"/></svg>
+    </button>
+    <button class="lightbox__nav lightbox__nav--prev" type="button" aria-label="Previous image">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M15 6l-6 6 6 6"/></svg>
+    </button>
+    <button class="lightbox__nav lightbox__nav--next" type="button" aria-label="Next image">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M9 6l6 6-6 6"/></svg>
+    </button>
+    <div class="lightbox__stage">
+      <img class="lightbox__img" alt="">
+    </div>
+    <p class="lightbox__counter"><span data-lb-current>1</span> / <span data-lb-total>1</span></p>
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="container">
+      <a href="index.html" class="logo logo--center site-footer__logo" aria-label="Neuro Sciences Foundation">
+        <img src="Assets%20Home%20page/Logo.png" alt="Neuro Sciences Foundation">
+      </a>
+
+      <p class="site-footer__intro">
+        At Neuro Sciences Foundation we provide high-quality mental health treatment and primary care,
+        ensuring that even the most underserved segments of the society receive the support they need.
+      </p>
+
+      <nav class="footer-nav" aria-label="Footer">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="stories.html">Stories</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+
+      <ul class="socials" aria-label="Social media">
+        <li><a href="https://www.facebook.com/people/Neuro-Sciences-Foundation/61589567104282/" target="_blank" rel="noopener" aria-label="Facebook"><svg><use href="#i-fb"/></svg></a></li>
+        <li><a href="https://www.instagram.com/neuro_sciences_foundation" target="_blank" rel="noopener" aria-label="Instagram"><svg><use href="#i-ig"/></svg></a></li>
+        <li><a href="https://www.tiktok.com/@nsf_pakistan" target="_blank" rel="noopener" aria-label="TikTok"><svg><use href="#i-tiktok"/></svg></a></li>
+        <li><a href="https://x.com/nsf_pakistann?s=20" target="_blank" rel="noopener" aria-label="X (Twitter)"><svg><use href="#i-x"/></svg></a></li>
+        <li><a href="https://www.linkedin.com/company/121993945/" target="_blank" rel="noopener" aria-label="LinkedIn"><svg><use href="#i-li"/></svg></a></li>
+      </ul>
+
+      <p class="site-footer__copy">© Copyright 2022, All Rights Reserved by NSF Pakistan.</p>
+    </div>
+  </footer>
+
+  <!-- ============================================================
+       SCROLL-TRIGGERED DONATE POPUP (fires at ~20% page scroll)
+       ============================================================ -->
+  <div class="scroll-popup" id="scrollPopup" role="dialog" aria-modal="true" aria-labelledby="scrollPopupTitle" hidden>
+    <div class="scroll-popup__backdrop" data-spop-close></div>
+    <div class="scroll-popup__card" role="document">
+      <button class="scroll-popup__close" type="button" aria-label="Close" data-spop-close>
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+          <path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" d="M6 6l12 12M18 6L6 18"/>
+        </svg>
+      </button>
+      <div class="scroll-popup__body">
+        <p class="eyebrow">Save a Life</p>
+        <h3 class="scroll-popup__title" id="scrollPopupTitle">Support Healing &amp; Hope in Rural Pakistan</h3>
+        <p class="scroll-popup__lead">
+          Your donation helps provide free medical care and mental health support to underserved communities.
+        </p>
+        <a href="donate.html" class="btn btn--teal btn--lg scroll-popup__cta">
+          Donate Now
+          <svg class="btn__icon"><use href="#i-arrow"/></svg>
+        </a>
+      </div>
+      <div class="scroll-popup__media">
+        <img src="POpup%20image.png" alt="Community in rural Pakistan">
+      </div>
+    </div>
+  </div>
+
+  <script>
+    /* ---------- Hamburger ---------- */
+    document.querySelector('.nav-toggle')?.addEventListener('click', function () {
+      const open = this.getAttribute('aria-expanded') === 'true';
+      this.setAttribute('aria-expanded', String(!open));
+      document.querySelector('.main-nav').classList.toggle('is-open');
+    });
+
+    /* ---------- Scroll-triggered donate popup (≥20% page scroll) ---------- */
+    (function () {
+      const popup = document.getElementById('scrollPopup');
+      if (!popup) return;
+      const closers = popup.querySelectorAll('[data-spop-close]');
+      let shown = false;
+      let dismissed = false;
+      function show() {
+        if (shown || dismissed) return;
+        shown = true;
+        popup.hidden = false;
+        requestAnimationFrame(() => popup.classList.add('is-open'));
+      }
+      function hide() {
+        dismissed = true;
+        popup.classList.remove('is-open');
+        setTimeout(() => { popup.hidden = true; }, 260);
+      }
+      closers.forEach((b) => b.addEventListener('click', hide));
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && !popup.hidden) hide();
+      });
+      function check() {
+        if (shown || dismissed) return;
+        const max = Math.max(1, document.documentElement.scrollHeight - window.innerHeight);
+        const pct = window.scrollY / max;
+        if (pct >= 0.20) show();
+      }
+      window.addEventListener('scroll', check, { passive: true });
+      window.addEventListener('resize', check);
+      check();
+    })();
+
+    /* ---------- Hero title: word-by-word reveal ---------- */
+    (function () {
+      const title = document.querySelector('.hero-gallery__title');
+      if (!title) return;
+      const stepMs = 90; // delay between successive words
+      let wordIndex = 0;
+
+      // Walk nodes; for text nodes split into word spans, keep <br> in place.
+      const nodes = Array.from(title.childNodes);
+      const frag = document.createDocumentFragment();
+      nodes.forEach((node) => {
+        if (node.nodeType === Node.TEXT_NODE) {
+          const text = node.textContent.replace(/\s+/g, ' ');
+          const parts = text.split(' ');
+          parts.forEach((w, i) => {
+            const trimmed = w;
+            if (!trimmed.length) return;
+            const span = document.createElement('span');
+            span.className = 'gallery-word';
+            span.textContent = trimmed;
+            span.style.setProperty('--word-delay', `${(wordIndex * stepMs) / 1000}s`);
+            wordIndex++;
+            frag.appendChild(span);
+            if (i < parts.length - 1) frag.appendChild(document.createTextNode(' '));
+          });
+        } else if (node.nodeName === 'BR') {
+          frag.appendChild(document.createElement('br'));
+        } else {
+          frag.appendChild(node.cloneNode(true));
+        }
+      });
+      title.innerHTML = '';
+      title.appendChild(frag);
+
+      // Time the lead's fade-in to land right after the last word.
+      const lead = document.querySelector('.hero-gallery__lead');
+      if (lead) {
+        const leadDelay = ((wordIndex * stepMs) / 1000) + 0.25;
+        lead.style.setProperty('--lead-delay', `${leadDelay}s`);
+
+        const sub = document.querySelector('.hero-gallery__sub');
+        if (sub) sub.style.setProperty('--sub-delay', `${leadDelay + 0.3}s`);
+      }
+    })();
+
+    /* ---------- Lightbox ---------- */
+    (function () {
+      const lb       = document.getElementById('lightbox');
+      if (!lb) return;
+      const imgEl    = lb.querySelector('.lightbox__img');
+      const counterC = lb.querySelector('[data-lb-current]');
+      const counterT = lb.querySelector('[data-lb-total]');
+      const closeBtn = lb.querySelector('.lightbox__close');
+      const prevBtn  = lb.querySelector('.lightbox__nav--prev');
+      const nextBtn  = lb.querySelector('.lightbox__nav--next');
+
+      let items = [];
+      let index = 0;
+      let lastFocus = null;
+
+      function show(i) {
+        index = (i + items.length) % items.length;
+        const src = items[index].getAttribute('data-img');
+        imgEl.src = src;
+        imgEl.alt = items[index].querySelector('img')?.alt || '';
+        counterC.textContent = String(index + 1);
+        counterT.textContent = String(items.length);
+      }
+
+      function open(group, startIdx) {
+        items = group;
+        lastFocus = document.activeElement;
+        lb.hidden = false;
+        document.body.style.overflow = 'hidden';
+        requestAnimationFrame(() => lb.classList.add('is-open'));
+        show(startIdx);
+        closeBtn.focus();
+      }
+      function close() {
+        lb.classList.remove('is-open');
+        document.body.style.overflow = '';
+        setTimeout(() => { lb.hidden = true; imgEl.src = ''; }, 220);
+        if (lastFocus && lastFocus.focus) lastFocus.focus();
+      }
+
+      document.querySelectorAll('[data-gallery]').forEach((grid) => {
+        const buttons = Array.from(grid.querySelectorAll('.gallery-item'));
+        buttons.forEach((btn, i) => {
+          btn.addEventListener('click', () => open(buttons, i));
+        });
+      });
+
+      closeBtn.addEventListener('click', close);
+      prevBtn.addEventListener('click', () => show(index - 1));
+      nextBtn.addEventListener('click', () => show(index + 1));
+      lb.addEventListener('click', (e) => {
+        if (e.target === lb || e.target.classList.contains('lightbox__stage')) close();
+      });
+      document.addEventListener('keydown', (e) => {
+        if (lb.hidden) return;
+        if (e.key === 'Escape')     close();
+        if (e.key === 'ArrowLeft')  show(index - 1);
+        if (e.key === 'ArrowRight') show(index + 1);
+      });
+    })();
+
+    /* ---------- Scroll reveal (matches homepage) ---------- */
+    (function () {
+      const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      const sections = document.querySelectorAll('section:not(.hero)');
+
+      const FLATTEN_SELECTOR = ['.container', '.gallery-category__head', '.gallery-grid'].join(',');
+
+      sections.forEach((section) => {
+        section.classList.add('fade-section');
+        let targets = [section];
+        let changed = true;
+        while (changed) {
+          changed = false;
+          const next = [];
+          targets.forEach((n) => {
+            if (n.matches && n.matches(FLATTEN_SELECTOR) && n.children.length > 0) {
+              Array.from(n.children).forEach((c) => next.push(c));
+              changed = true;
+            } else {
+              next.push(n);
+            }
+          });
+          targets = next;
+        }
+        targets.forEach((child, i) => {
+          if (child === section) return;
+          child.classList.add('fade-child');
+          child.style.setProperty('--stagger-delay', `${0.05 + i * 0.04}s`);
+        });
+      });
+
+      if (reduce || !('IntersectionObserver' in window)) {
+        sections.forEach((s) => s.classList.add('in-view'));
+        return;
+      }
+      const io = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('in-view');
+            io.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0, rootMargin: '0px' });
+      sections.forEach((s) => io.observe(s));
+    })();
+
+    /* ---------- Smooth scroll (matches homepage) ---------- */
+    (function () {
+      const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      const coarse = window.matchMedia('(pointer: coarse)').matches;
+      if (reduce || coarse) return;
+
+      const scrollContent = document.createElement('div');
+      scrollContent.className = 'scroll-content';
+      // Move every body child into the wrapper EXCEPT the lightbox, which must
+      // remain in <body> so `position: fixed` works (transformed ancestors
+      // break it).
+      const PIN_OUT = ['#lightbox', '#scrollPopup'];
+      const pinned = [];
+      PIN_OUT.forEach((sel) => {
+        const el = document.querySelector(sel);
+        if (el) pinned.push(el);
+      });
+      Array.from(document.body.childNodes).forEach((node) => {
+        if (pinned.includes(node)) return;
+        scrollContent.appendChild(node);
+      });
+      document.body.appendChild(scrollContent);
+      // Ensure pinned nodes stay attached to <body>.
+      pinned.forEach((el) => document.body.appendChild(el));
+
+      const startY = window.scrollY;
+      let target = startY, current = startY;
+      const ease = 0.08;
+      function syncBodyHeight() { document.body.style.height = scrollContent.offsetHeight + 'px'; }
+      function tick() {
+        const delta = target - current;
+        if (Math.abs(delta) < 0.05) current = target;
+        else current += delta * ease;
+        scrollContent.style.transform = `translate3d(0, ${-current}px, 0)`;
+        requestAnimationFrame(tick);
+      }
+      window.addEventListener('scroll', () => { target = window.scrollY; }, { passive: true });
+      window.addEventListener('resize', syncBodyHeight);
+      if ('ResizeObserver' in window) new ResizeObserver(syncBodyHeight).observe(scrollContent);
+      syncBodyHeight();
+      if (startY > 0) window.scrollTo(0, startY);
+      requestAnimationFrame(tick);
+    })();
+
+    /* ---------- Cursor ring (matches homepage) ---------- */
+    (function () {
+      const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      const coarse = window.matchMedia('(pointer: coarse)').matches;
+      if (reduce || coarse) return;
+      const ring = document.createElement('div');
+      ring.className = 'cursor-ring';
+      document.body.appendChild(ring);
+      let tx = innerWidth / 2, ty = innerHeight / 2, cx = tx, cy = ty;
+      const ease = 0.14;
+      let visible = false;
+      window.addEventListener('mousemove', (e) => {
+        tx = e.clientX; ty = e.clientY;
+        if (!visible) { cx = tx; cy = ty; ring.classList.add('is-visible'); visible = true; }
+      }, { passive: true });
+      document.addEventListener('mouseleave', () => { ring.classList.remove('is-visible'); visible = false; });
+      document.addEventListener('mouseenter', () => { if (visible) ring.classList.add('is-visible'); });
+      const HOVER_SEL = 'a, button, .btn, .gallery-item, .nav-toggle, .lightbox__nav, .lightbox__close';
+      document.addEventListener('mouseover', (e) => { if (e.target.closest && e.target.closest(HOVER_SEL)) ring.classList.add('is-hover'); });
+      document.addEventListener('mouseout',  (e) => { if (e.target.closest && e.target.closest(HOVER_SEL)) ring.classList.remove('is-hover'); });
+      function tick() {
+        cx += (tx - cx) * ease;
+        cy += (ty - cy) * ease;
+        ring.style.transform = `translate3d(${cx}px, ${cy}px, 0)`;
+        requestAnimationFrame(tick);
+      }
+      requestAnimationFrame(tick);
+    })();
+  </script>
+</body>
+</html>
