@@ -951,15 +951,30 @@ input, textarea, select { font: inherit; color: inherit; }
   align-items: stretch;
 }
 .story-card {
+  position: relative;
+  min-width: 0;
   background: #F3F4F6;
   border-radius: 20px;
   padding: 13px 13px 26px;
   display: flex;
   flex-direction: column;
   gap: var(--sp-4);
-  transition: transform var(--t);
+  cursor: pointer;
+  outline: 2px solid transparent;
+  outline-offset: 2px;
+  transition: transform var(--t), outline-color var(--t);
 }
-.story-card:hover { transform: translateY(-3px); }
+.story-card:hover {
+  transform: translateY(-3px);
+  outline-color: var(--c-orange);
+}
+/* Make the whole card a click target that opens the story (stretched link). */
+.story-card__link::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+}
 
 /* Before / after image pair with teal arrow between */
 .story-card__images {
@@ -967,12 +982,13 @@ input, textarea, select { font: inherit; color: inherit; }
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 8px;
+  min-width: 0;
 }
 .story-card__before,
 .story-card__after {
   position: relative;
   margin: 0;
-  width: 187px;
+  width: 100%;
   height: 192px;
   max-width: 100%;
   min-width: 0;
@@ -3692,9 +3708,13 @@ input, textarea, select { font: inherit; color: inherit; }
   transform: translateY(0) scale(1);
 }
 .donate-modal__close {
-  position: absolute;
+  position: sticky;
+  float: right;
   top: 14px;
-  right: 14px;
+  /* negative bottom margin cancels the button's height so it doesn't push
+     content down; small top/right negatives nudge it toward the corner while
+     staying inside the dialog padding at every breakpoint */
+  margin: -16px -12px -40px 0;
   width: 40px;
   height: 40px;
   display: inline-flex;
