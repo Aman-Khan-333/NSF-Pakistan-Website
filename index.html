@@ -31,6 +31,8 @@
       <symbol id="i-pin" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" d="M12 22s8-7 8-13a8 8 0 0 0-16 0c0 6 8 13 8 13z"/><circle cx="12" cy="9" r="2.5" fill="none" stroke="currentColor" stroke-width="1.7"/></symbol>
       <symbol id="i-phone" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" d="M22 17v3a2 2 0 0 1-2.2 2 19 19 0 0 1-8.3-3 18.7 18.7 0 0 1-6-6A19 19 0 0 1 2.5 4.2 2 2 0 0 1 4.5 2H7a2 2 0 0 1 2 1.7c.1 1 .3 2 .6 3a2 2 0 0 1-.5 2L8 9.7a16 16 0 0 0 6 6l1-1a2 2 0 0 1 2.1-.5c1 .3 2 .5 3 .6A2 2 0 0 1 22 17z"/></symbol>
       <symbol id="i-arrow" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M5 12h14m-6-7 7 7-7 7"/></symbol>
+      <symbol id="i-calendar" viewBox="0 0 24 24"><rect x="3" y="4.5" width="18" height="16" rx="2" fill="none" stroke="currentColor" stroke-width="1.7"/><path fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" d="M3 9h18M8 2.5v4M16 2.5v4"/></symbol>
+      <symbol id="i-briefcase" viewBox="0 0 24 24"><rect x="3" y="7.5" width="18" height="12" rx="2" fill="none" stroke="currentColor" stroke-width="1.7"/><path fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" d="M8.5 7.5V6a2 2 0 0 1 2-2h3a2 2 0 0 1 2 2v1.5M3 12.5h18"/></symbol>
       <symbol id="i-arrow-up-right" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M7 17 17 7M9 7h8v8"/></symbol>
       <symbol id="i-fb" viewBox="0 0 24 24"><path fill="currentColor" d="M22 12a10 10 0 1 0-11.6 9.9V14.9H7.9V12h2.5V9.8c0-2.5 1.5-3.9 3.8-3.9 1.1 0 2.2.2 2.2.2v2.5h-1.3c-1.2 0-1.6.8-1.6 1.6V12h2.8l-.5 2.9h-2.3v7A10 10 0 0 0 22 12z"/></symbol>
       <symbol id="i-ig" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="5" fill="none" stroke="currentColor" stroke-width="1.8"/><circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="1.8"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></symbol>
@@ -666,20 +668,24 @@
         <p class="section__lead">
           Your skills can inspire, uplift, and transform lives creating opportunities and lasting change.
         </p>
-        <div class="volunteer__slides">
-          <img class="volunteer__slide is-active" src="Assets%20Home%20page/join%20us%20section%20image.png" alt="">
-          <img class="volunteer__slide" src="Assets%20Home%20page/join%20us%20section%20image.png" alt="">
-          <img class="volunteer__slide" src="Assets%20Home%20page/join%20us%20section%20image.png" alt="">
-          <div class="volunteer__progress" aria-hidden="true">
-            <span class="volunteer__progress-bar is-active"></span>
-            <span class="volunteer__progress-bar"></span>
-            <span class="volunteer__progress-bar"></span>
-          </div>
-        </div>
       </div>
 
+      <div class="volunteer__cta">
+        <p class="eyebrow eyebrow--light">Paid Positions</p>
+        <h3 class="volunteer__cta-title">Build a Career With Purpose</h3>
+        <p class="volunteer__cta-text">
+          Join our salaried team and help expand access to mental health care.
+        </p>
+        <a href="#" class="btn btn--teal btn--lg" data-vacancies-open>
+          Explore Vacancies
+          <svg class="btn__icon"><use href="#i-arrow"/></svg>
+        </a>
+      </div>
+
+      <div class="volunteer__roles">
+        <p class="eyebrow">Volunteer roles — these are unpaid. Give your time and skills.</p>
       <ul class="volunteer__list">
-        <li class="volunteer__item is-active">
+        <li class="volunteer__item">
           <span class="volunteer__num">.01</span>
           <span class="volunteer__role">Medical &amp; Clinical</span>
           <a href="#" class="btn btn--white-pill" data-join-open data-role="Medical &amp; Clinical">
@@ -720,6 +726,7 @@
           </a>
         </li>
       </ul>
+      </div>
     </div>
   </section>
   </div><!-- /.training-volunteer -->
@@ -990,23 +997,6 @@
           return `<span class="mission__word" style="--word-delay:${delay}s">${w}</span>`;
         }).join(' ');
       });
-    })();
-
-    /* ---------- Volunteer slideshow: cycle slides + progress bars ---------- */
-    (function () {
-      const slides = document.querySelectorAll('.volunteer__slide');
-      const bars = document.querySelectorAll('.volunteer__progress-bar');
-      if (slides.length < 2 || bars.length !== slides.length) return;
-
-      let idx = 0;
-      const intervalMs = 3500;
-      setInterval(() => {
-        slides[idx].classList.remove('is-active');
-        bars[idx].classList.remove('is-active');
-        idx = (idx + 1) % slides.length;
-        slides[idx].classList.add('is-active');
-        bars[idx].classList.add('is-active');
-      }, intervalMs);
     })();
 
     /* ---------- Awareness: word-by-word reveal ----------
@@ -1823,6 +1813,145 @@
   </div>
 
   <!-- ============================================================
+       VACANCIES MODAL — open paid positions + application form
+       ============================================================ -->
+  <div class="donate-modal vacancies-modal" id="vacanciesModal" role="dialog" aria-modal="true" aria-labelledby="vacanciesModalTitle" hidden>
+    <div class="donate-modal__backdrop" data-vac-close></div>
+    <div class="donate-modal__dialog donate-modal__dialog--md" role="document">
+      <button class="donate-modal__close" type="button" aria-label="Close" data-vac-close>
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+          <path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" d="M6 6l12 12M18 6L6 18"/>
+        </svg>
+      </button>
+
+      <header class="donate-modal__header">
+        <p class="eyebrow">Careers at NSF</p>
+        <h2 class="donate-modal__title" id="vacanciesModalTitle">Current Vacancies</h2>
+        <p class="donate-modal__lead">These are our open, paid positions. Review the details, note the application deadline, then apply using the form below.</p>
+      </header>
+
+      <ul class="vacancy-list">
+        <li class="vacancy">
+          <div class="vacancy__top">
+            <h3 class="vacancy__title">Clinical Psychologist</h3>
+            <span class="vacancy__type">Full-time</span>
+          </div>
+          <ul class="vacancy__meta">
+            <li><svg class="vacancy__ico"><use href="#i-pin"/></svg>Islamabad</li>
+            <li><svg class="vacancy__ico"><use href="#i-briefcase"/></svg>2+ years</li>
+            <li class="vacancy__deadline"><svg class="vacancy__ico"><use href="#i-calendar"/></svg>Apply by 31 Jul 2026</li>
+          </ul>
+          <p class="vacancy__desc">Deliver assessments and one-to-one therapy at our clinics and community camps.</p>
+          <button class="vacancy__apply" type="button" data-vac-apply data-role="Clinical Psychologist">
+            Apply for this role <svg class="btn__icon"><use href="#i-arrow"/></svg>
+          </button>
+        </li>
+
+        <li class="vacancy">
+          <div class="vacancy__top">
+            <h3 class="vacancy__title">Psychiatrist</h3>
+            <span class="vacancy__type">Full-time</span>
+          </div>
+          <ul class="vacancy__meta">
+            <li><svg class="vacancy__ico"><use href="#i-pin"/></svg>Rawalpindi</li>
+            <li><svg class="vacancy__ico"><use href="#i-briefcase"/></svg>FCPS / MCPS</li>
+            <li class="vacancy__deadline"><svg class="vacancy__ico"><use href="#i-calendar"/></svg>Apply by 15 Aug 2026</li>
+          </ul>
+          <p class="vacancy__desc">Lead diagnosis and medication management for patients across our programs.</p>
+          <button class="vacancy__apply" type="button" data-vac-apply data-role="Psychiatrist">
+            Apply for this role <svg class="btn__icon"><use href="#i-arrow"/></svg>
+          </button>
+        </li>
+
+        <li class="vacancy">
+          <div class="vacancy__top">
+            <h3 class="vacancy__title">Community Outreach Officer</h3>
+            <span class="vacancy__type">Full-time</span>
+          </div>
+          <ul class="vacancy__meta">
+            <li><svg class="vacancy__ico"><use href="#i-pin"/></svg>Islamabad</li>
+            <li><svg class="vacancy__ico"><use href="#i-briefcase"/></svg>1+ years</li>
+            <li class="vacancy__deadline"><svg class="vacancy__ico"><use href="#i-calendar"/></svg>Apply by 25 Jul 2026</li>
+          </ul>
+          <p class="vacancy__desc">Run awareness drives and connect rural communities to our free services.</p>
+          <button class="vacancy__apply" type="button" data-vac-apply data-role="Community Outreach Officer">
+            Apply for this role <svg class="btn__icon"><use href="#i-arrow"/></svg>
+          </button>
+        </li>
+
+        <li class="vacancy">
+          <div class="vacancy__top">
+            <h3 class="vacancy__title">Fundraising &amp; Partnerships Lead</h3>
+            <span class="vacancy__type">Full-time</span>
+          </div>
+          <ul class="vacancy__meta">
+            <li><svg class="vacancy__ico"><use href="#i-pin"/></svg>Islamabad</li>
+            <li><svg class="vacancy__ico"><use href="#i-briefcase"/></svg>3+ years</li>
+            <li class="vacancy__deadline"><svg class="vacancy__ico"><use href="#i-calendar"/></svg>Apply by 10 Aug 2026</li>
+          </ul>
+          <p class="vacancy__desc">Build donor relationships and secure grants that fund our patient care.</p>
+          <button class="vacancy__apply" type="button" data-vac-apply data-role="Fundraising &amp; Partnerships Lead">
+            Apply for this role <svg class="btn__icon"><use href="#i-arrow"/></svg>
+          </button>
+        </li>
+
+        <li class="vacancy">
+          <div class="vacancy__top">
+            <h3 class="vacancy__title">Operations Coordinator</h3>
+            <span class="vacancy__type">Full-time</span>
+          </div>
+          <ul class="vacancy__meta">
+            <li><svg class="vacancy__ico"><use href="#i-pin"/></svg>Rawalpindi</li>
+            <li><svg class="vacancy__ico"><use href="#i-briefcase"/></svg>2+ years</li>
+            <li class="vacancy__deadline"><svg class="vacancy__ico"><use href="#i-calendar"/></svg>Apply by 05 Aug 2026</li>
+          </ul>
+          <p class="vacancy__desc">Keep clinics and field programs running smoothly day to day.</p>
+          <button class="vacancy__apply" type="button" data-vac-apply data-role="Operations Coordinator">
+            Apply for this role <svg class="btn__icon"><use href="#i-arrow"/></svg>
+          </button>
+        </li>
+      </ul>
+
+      <form class="appt-form vacancy-form" onsubmit="return false;">
+        <h3 class="vacancy-form__heading">Apply Now</h3>
+        <div class="appt-form__row">
+          <label>
+            <span>Full name</span>
+            <input type="text" name="name" placeholder="Your full name" required>
+          </label>
+          <label>
+            <span>Phone</span>
+            <input type="tel" name="phone" placeholder="03xx-xxxxxxx" required>
+          </label>
+        </div>
+        <label>
+          <span>Email</span>
+          <input type="email" name="email" placeholder="you@example.com" required>
+        </label>
+        <label>
+          <span>Position</span>
+          <select name="position" id="vacancyRoleSelect" required>
+            <option>Clinical Psychologist</option>
+            <option>Psychiatrist</option>
+            <option>Community Outreach Officer</option>
+            <option>Fundraising &amp; Partnerships Lead</option>
+            <option>Operations Coordinator</option>
+          </select>
+        </label>
+        <label>
+          <span>Why are you a good fit? (optional)</span>
+          <textarea name="about" rows="3" placeholder="Briefly tell us about your experience"></textarea>
+        </label>
+        <button type="submit" class="btn btn--teal btn--lg appt-form__submit">
+          Submit Application
+          <svg class="btn__icon"><use href="#i-arrow"/></svg>
+        </button>
+        <p class="appt-form__note">Shortlisted candidates will be contacted before the listed deadline.</p>
+      </form>
+    </div>
+  </div>
+
+  <!-- ============================================================
        SCROLL-TRIGGERED DONATE POPUP (fires at ~20% page scroll)
        ============================================================ -->
   <div class="scroll-popup" id="scrollPopup" role="dialog" aria-modal="true" aria-labelledby="scrollPopupTitle" hidden>
@@ -1934,10 +2063,34 @@
           if (e.key === 'Escape' && !m.hidden) hide();
         });
       }
-      bindModal('apptModal',  '[data-appointment-open]', '[data-appt-close]');
-      bindModal('speakModal', '[data-speak-open]',       '[data-speak-close]');
-      bindModal('joinModal',  '[data-join-open]',        '[data-join-close]');
-      bindModal('helpModal',  '[data-help-open]',        '[data-help-close]');
+      bindModal('apptModal',     '[data-appointment-open]', '[data-appt-close]');
+      bindModal('speakModal',    '[data-speak-open]',       '[data-speak-close]');
+      bindModal('joinModal',     '[data-join-open]',        '[data-join-close]');
+      bindModal('helpModal',     '[data-help-open]',        '[data-help-close]');
+      bindModal('vacanciesModal','[data-vacancies-open]',   '[data-vac-close]');
+
+      /* Vacancy "Apply" buttons: preselect the role, then scroll the form
+         into view inside the modal and focus the name field. */
+      (function () {
+        const vModal  = document.getElementById('vacanciesModal');
+        if (!vModal) return;
+        const select  = document.getElementById('vacancyRoleSelect');
+        const form    = vModal.querySelector('.vacancy-form');
+        vModal.querySelectorAll('[data-vac-apply]').forEach(btn => {
+          btn.addEventListener('click', () => {
+            const role = btn.getAttribute('data-role');
+            if (select && role) {
+              const match = Array.from(select.options).find(o => o.text.trim() === role.trim());
+              if (match) select.value = match.value;
+            }
+            if (form) {
+              form.scrollIntoView({ behavior: 'smooth', block: 'start' });
+              const nameInput = form.querySelector('input[name="name"]');
+              if (nameInput) setTimeout(() => nameInput.focus(), 300);
+            }
+          });
+        });
+      })();
 
       /* Pre-fill role + heading when opening Join modal */
       document.querySelectorAll('[data-join-open]').forEach(btn => {
