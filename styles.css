@@ -1002,6 +1002,20 @@ input, textarea, select { font: inherit; color: inherit; }
   object-fit: cover;
   display: block;
 }
+/* Empty placeholder (no before/after photo yet) */
+.story-card__ph {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #fff;
+  border: 2px dashed var(--c-line);
+}
+.story-card__ph-icon {
+  width: 36px;
+  height: 36px;
+  color: var(--c-muted-2);
+  opacity: 0.45;
+}
 .story-card__before figcaption,
 .story-card__after figcaption {
   position: absolute;
