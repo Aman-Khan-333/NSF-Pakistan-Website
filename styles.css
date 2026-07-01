@@ -4512,6 +4512,24 @@ input, textarea, select { font: inherit; color: inherit; }
 }
 .gallery-item:hover img { transform: scale(1.04); }
 
+/* Empty placeholder tiles (no image yet) */
+.gallery-item--placeholder {
+  cursor: default;
+  background: #fff;
+  border: 2px dashed var(--c-line);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.gallery-category--alt .gallery-item--placeholder { background: rgba(255, 255, 255, 0.6); }
+.gallery-item--placeholder:hover { transform: none; box-shadow: none; }
+.gallery-placeholder__icon {
+  width: 34px;
+  height: 34px;
+  color: var(--c-muted-2);
+  opacity: 0.45;
+}
+
 @media (max-width: 1023px) {
   .gallery-grid { grid-template-columns: repeat(3, 1fr); }
 }
