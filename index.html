@@ -917,6 +917,33 @@
       document.querySelector('.main-nav').classList.toggle('is-open');
     });
 
+    /* ---------- Mobile: hide nav on scroll down, show on scroll up ---------- */
+    (function () {
+      const header = document.querySelector('.site-header');
+      if (!header) return;
+      const mq = window.matchMedia('(max-width: 1023px)');
+      // On mobile the header is position:fixed; lift it out of the hero (an
+      // isolated stacking context) to <body> so it paints over page content.
+      if (mq.matches && header.parentElement !== document.body) document.body.appendChild(header);
+      let lastY = window.scrollY;
+      let ticking = false;
+      const DELTA = 6;
+      function update() {
+        ticking = false;
+        if (!mq.matches) { header.classList.remove('is-hidden'); return; }
+        // Keep the bar visible whenever the mobile menu is open.
+        if (document.querySelector('.main-nav.is-open')) { header.classList.remove('is-hidden'); lastY = window.scrollY; return; }
+        const y = window.scrollY;
+        if (Math.abs(y - lastY) < DELTA) return;
+        if (y > lastY && y > 90) header.classList.add('is-hidden');   // scrolling down
+        else                     header.classList.remove('is-hidden'); // scrolling up
+        lastY = y;
+      }
+      window.addEventListener('scroll', () => {
+        if (!ticking) { requestAnimationFrame(update); ticking = true; }
+      }, { passive: true });
+    })();
+
     /* ---------- Stats count-up ----------
        For every .stat__num (hero + impact), .story-card__big, and the
        <strong> inside .tier-card__amount, parse out the prefix/number/
@@ -1228,6 +1255,10 @@
       // Keep fixed-position overlays (popups, lightboxes) attached to <body>
       // so they don't inherit the wrapper's transform (which would break
       // `position: fixed`).
+      // Skip the transform-based smooth scroll at mobile widths too, so the
+      // fixed mobile header pins to the viewport instead of this wrapper.
+      if (window.matchMedia('(max-width: 1023px)').matches) return;
+
       const scrollContent = document.createElement('div');
       scrollContent.className = 'scroll-content';
       const PIN_OUT = ['#scrollPopup'];
@@ -1665,18 +1696,10 @@
       <header class="donate-modal__header">
         <p class="eyebrow">Find Strength</p>
         <h2 class="donate-modal__title" id="helpModalTitle">You Don't Have to Face This Alone</h2>
-        <p class="donate-modal__lead">Reach out in confidence — our team will get back to you quickly. Everything you share stays private.</p>
+        <p class="donate-modal__lead">Leave your details and our team will reach out — confidentially, and free of charge.</p>
       </header>
 
       <form class="appt-form help-form" onsubmit="return false;">
-        <fieldset class="help-form__choice">
-          <legend>This help is for</legend>
-          <div class="help-form__radios">
-            <label><input type="radio" name="who" value="self" checked> <span>Myself</span></label>
-            <label><input type="radio" name="who" value="someone"> <span>Someone I care about</span></label>
-          </div>
-        </fieldset>
-
         <div class="appt-form__row">
           <label>
             <span>Your name</span>
@@ -1689,47 +1712,18 @@
         </div>
 
         <label>
-          <span>Email (optional)</span>
-          <input type="email" name="email" placeholder="you@example.com">
-        </label>
-
-        <div class="appt-form__row">
-          <label>
-            <span>How urgent is this?</span>
-            <select name="urgency" required>
-              <option value="">Select urgency</option>
-              <option>I need help right now</option>
-              <option>Within 24 hours</option>
-              <option>Within this week</option>
-              <option>Just exploring options</option>
-            </select>
-          </label>
-          <label>
-            <span>Best time to reach you</span>
-            <select name="reach">
-              <option>Anytime</option>
-              <option>Morning (9 AM – 12 PM)</option>
-              <option>Afternoon (12 – 5 PM)</option>
-              <option>Evening (5 – 8 PM)</option>
-            </select>
-          </label>
-        </div>
-
-        <label>
-          <span>What kind of support are you looking for? (optional)</span>
-          <textarea name="support" rows="3" placeholder="Share as much or as little as you're comfortable with — it stays between us."></textarea>
+          <span>How can we help? <em>(optional)</em></span>
+          <textarea name="support" rows="2" placeholder="Share as much or as little as you like — it stays private."></textarea>
         </label>
 
         <p class="help-form__crisis">
-          <strong>In immediate crisis?</strong>
-          Call us directly: <a href="tel:+923008991821">0300-8991821</a> (Islamabad) or <a href="tel:+923315355043">0331-5355043</a> (Rawalpindi).
+          <strong>In crisis?</strong> Call <a href="tel:+923008991821">0300-8991821</a> (ISB) or <a href="tel:+923315355043">0331-5355043</a> (RWP).
         </p>
 
         <button type="submit" class="btn btn--teal btn--lg appt-form__submit">
           Request a Call Back
           <svg class="btn__icon"><use href="#i-arrow"/></svg>
         </button>
-        <p class="appt-form__note">Your request is completely confidential. There's no fee — ever.</p>
       </form>
     </div>
   </div>

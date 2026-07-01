@@ -2094,6 +2094,17 @@ input, textarea, select { font: inherit; color: inherit; }
   .header__cta { display: none; }
   .nav-toggle { display: inline-flex; }
 
+  /* Sticky mobile nav: travels with the page, hides on scroll down,
+     reappears on scroll up. */
+  .site-header {
+    position: fixed;
+    transition: transform 0.35s ease;
+    will-change: transform;
+  }
+  .site-header.is-hidden {
+    transform: translateX(-50%) translateY(calc(-100% - 24px));
+  }
+
   .founder__grid { grid-template-columns: 1fr; }
   .founder__photo { min-height: 320px; }
   .founder__cards { grid-template-columns: 1fr 1fr; }

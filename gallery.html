@@ -246,6 +246,33 @@
       document.querySelector('.main-nav').classList.toggle('is-open');
     });
 
+    /* ---------- Mobile: hide nav on scroll down, show on scroll up ---------- */
+    (function () {
+      const header = document.querySelector('.site-header');
+      if (!header) return;
+      const mq = window.matchMedia('(max-width: 1023px)');
+      // On mobile the header is position:fixed; lift it out of the hero (an
+      // isolated stacking context) to <body> so it paints over page content.
+      if (mq.matches && header.parentElement !== document.body) document.body.appendChild(header);
+      let lastY = window.scrollY;
+      let ticking = false;
+      const DELTA = 6;
+      function update() {
+        ticking = false;
+        if (!mq.matches) { header.classList.remove('is-hidden'); return; }
+        // Keep the bar visible whenever the mobile menu is open.
+        if (document.querySelector('.main-nav.is-open')) { header.classList.remove('is-hidden'); lastY = window.scrollY; return; }
+        const y = window.scrollY;
+        if (Math.abs(y - lastY) < DELTA) return;
+        if (y > lastY && y > 90) header.classList.add('is-hidden');   // scrolling down
+        else                     header.classList.remove('is-hidden'); // scrolling up
+        lastY = y;
+      }
+      window.addEventListener('scroll', () => {
+        if (!ticking) { requestAnimationFrame(update); ticking = true; }
+      }, { passive: true });
+    })();
+
     /* ---------- Scroll-triggered donate popup (≥20% page scroll) ---------- */
     (function () {
       const popup = document.getElementById('scrollPopup');
@@ -436,6 +463,10 @@
       const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
       const coarse = window.matchMedia('(pointer: coarse)').matches;
       if (reduce || coarse) return;
+
+      // Skip the transform-based smooth scroll at mobile widths too, so the
+      // fixed mobile header pins to the viewport instead of this wrapper.
+      if (window.matchMedia('(max-width: 1023px)').matches) return;
 
       const scrollContent = document.createElement('div');
       scrollContent.className = 'scroll-content';

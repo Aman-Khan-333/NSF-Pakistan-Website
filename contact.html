@@ -257,7 +257,7 @@
           Donate Now
           <svg class="btn__icon"><use href="#i-arrow"/></svg>
         </a>
-        <a href="#" class="btn btn--white-pill">
+        <a href="#" class="btn btn--white-pill" data-help-open>
           Get Help Today
           <svg class="btn__icon"><use href="#i-arrow"/></svg>
         </a>
@@ -329,6 +329,53 @@
     </div>
   </div>
 
+  <!-- ============================================================
+       GET HELP MODAL — opens from "Get Help Today"
+       ============================================================ -->
+  <div class="donate-modal help-modal" id="helpModal" role="dialog" aria-modal="true" aria-labelledby="helpModalTitle" hidden>
+    <div class="donate-modal__backdrop" data-help-close></div>
+    <div class="donate-modal__dialog donate-modal__dialog--sm" role="document">
+      <button class="donate-modal__close" type="button" aria-label="Close" data-help-close>
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+          <path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" d="M6 6l12 12M18 6L6 18"/>
+        </svg>
+      </button>
+
+      <header class="donate-modal__header">
+        <p class="eyebrow">Find Strength</p>
+        <h2 class="donate-modal__title" id="helpModalTitle">You Don't Have to Face This Alone</h2>
+        <p class="donate-modal__lead">Leave your details and our team will reach out — confidentially, and free of charge.</p>
+      </header>
+
+      <form class="appt-form help-form" onsubmit="return false;">
+        <div class="appt-form__row">
+          <label>
+            <span>Your name</span>
+            <input type="text" name="name" placeholder="Full name" required>
+          </label>
+          <label>
+            <span>Phone</span>
+            <input type="tel" name="phone" placeholder="03xx-xxxxxxx" required>
+          </label>
+        </div>
+
+        <label>
+          <span>How can we help? <em>(optional)</em></span>
+          <textarea name="support" rows="2" placeholder="Share as much or as little as you like — it stays private."></textarea>
+        </label>
+
+        <p class="help-form__crisis">
+          <strong>In crisis?</strong> Call <a href="tel:+923008991821">0300-8991821</a> (ISB) or <a href="tel:+923315355043">0331-5355043</a> (RWP).
+        </p>
+
+        <button type="submit" class="btn btn--teal btn--lg appt-form__submit">
+          Request a Call Back
+          <svg class="btn__icon"><use href="#i-arrow"/></svg>
+        </button>
+      </form>
+    </div>
+  </div>
+
   <script>
     /* ---------- Hamburger ---------- */
     document.querySelector('.nav-toggle')?.addEventListener('click', function () {
@@ -336,6 +383,33 @@
       this.setAttribute('aria-expanded', String(!open));
       document.querySelector('.main-nav').classList.toggle('is-open');
     });
+
+    /* ---------- Mobile: hide nav on scroll down, show on scroll up ---------- */
+    (function () {
+      const header = document.querySelector('.site-header');
+      if (!header) return;
+      const mq = window.matchMedia('(max-width: 1023px)');
+      // On mobile the header is position:fixed; lift it out of the hero (an
+      // isolated stacking context) to <body> so it paints over page content.
+      if (mq.matches && header.parentElement !== document.body) document.body.appendChild(header);
+      let lastY = window.scrollY;
+      let ticking = false;
+      const DELTA = 6;
+      function update() {
+        ticking = false;
+        if (!mq.matches) { header.classList.remove('is-hidden'); return; }
+        // Keep the bar visible whenever the mobile menu is open.
+        if (document.querySelector('.main-nav.is-open')) { header.classList.remove('is-hidden'); lastY = window.scrollY; return; }
+        const y = window.scrollY;
+        if (Math.abs(y - lastY) < DELTA) return;
+        if (y > lastY && y > 90) header.classList.add('is-hidden');   // scrolling down
+        else                     header.classList.remove('is-hidden'); // scrolling up
+        lastY = y;
+      }
+      window.addEventListener('scroll', () => {
+        if (!ticking) { requestAnimationFrame(update); ticking = true; }
+      }, { passive: true });
+    })();
 
     /* ---------- News ticker: JS-driven scroll + drag (mouse + touch) ---------- */
     (function () {
@@ -450,6 +524,37 @@
       check();
     })();
 
+    /* ---------- Get Help modal ---------- */
+    (function () {
+      const modal = document.getElementById('helpModal');
+      if (!modal) return;
+      const openers = document.querySelectorAll('[data-help-open]');
+      const closers = modal.querySelectorAll('[data-help-close]');
+      let lastFocus = null;
+
+      function open(e) {
+        if (e) e.preventDefault();
+        lastFocus = document.activeElement;
+        modal.hidden = false;
+        document.body.style.overflow = 'hidden';
+        requestAnimationFrame(() => modal.classList.add('is-open'));
+        const closeBtn = modal.querySelector('.donate-modal__close');
+        if (closeBtn) closeBtn.focus();
+      }
+      function close() {
+        modal.classList.remove('is-open');
+        document.body.style.overflow = '';
+        setTimeout(() => { modal.hidden = true; }, 220);
+        if (lastFocus && lastFocus.focus) lastFocus.focus();
+      }
+
+      openers.forEach((b) => b.addEventListener('click', open));
+      closers.forEach((b) => b.addEventListener('click', close));
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && !modal.hidden) close();
+      });
+    })();
+
     /* ---------- Scroll reveal ---------- */
     (function () {
       const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
@@ -500,9 +605,13 @@
       const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
       const coarse = window.matchMedia('(pointer: coarse)').matches;
       if (reduce || coarse) return;
+      // Skip the transform-based smooth scroll at mobile widths too, so the
+      // fixed mobile header pins to the viewport instead of this wrapper.
+      if (window.matchMedia('(max-width: 1023px)').matches) return;
+
       const scrollContent = document.createElement('div');
       scrollContent.className = 'scroll-content';
-      const PIN_OUT = ['#scrollPopup'];
+      const PIN_OUT = ['#scrollPopup', '#helpModal'];
       const pinned = [];
       PIN_OUT.forEach((sel) => {
         const el = document.querySelector(sel);
