@@ -4520,7 +4520,7 @@ input, textarea, select { font: inherit; color: inherit; }
   border-radius: 12px;
   overflow: hidden;
   cursor: zoom-in;
-  aspect-ratio: 4 / 3;
+  aspect-ratio: 5 / 4;
   display: block;
   transition: transform .25s ease, box-shadow .25s ease;
 }
