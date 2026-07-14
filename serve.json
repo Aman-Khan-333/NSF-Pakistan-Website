@@ -1,0 +1,15 @@
+{
+  "cleanUrls": false,
+  "trailingSlash": false,
+  "directoryListing": false,
+  "rewrites": [
+    { "source": "/", "destination": "/index.html" },
+    { "source": "/index", "destination": "/index.html" },
+    { "source": "/about", "destination": "/about.html" },
+    { "source": "/stories", "destination": "/stories.html" },
+    { "source": "/story", "destination": "/story.html" },
+    { "source": "/gallery", "destination": "/gallery.html" },
+    { "source": "/contact", "destination": "/contact.html" },
+    { "source": "/donate", "destination": "/donate.html" }
+  ]
+}
