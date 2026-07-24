@@ -18,6 +18,7 @@
       <symbol id="i-arrow" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M5 12h14m-6-7 7 7-7 7"/></symbol>
       <symbol id="i-image" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="16" rx="2" fill="none" stroke="currentColor" stroke-width="1.6"/><circle cx="8.5" cy="9.5" r="1.6" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M4 17l5-5 4 4 3-3 4 4" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></symbol>
       <symbol id="i-pin" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" d="M12 22s8-7 8-13a8 8 0 0 0-16 0c0 6 8 13 8 13z"/><circle cx="12" cy="9" r="2.5" fill="none" stroke="currentColor" stroke-width="1.7"/></symbol>
+      <symbol id="i-phone" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" d="M22 17v3a2 2 0 0 1-2.2 2 19 19 0 0 1-8.3-3 18.7 18.7 0 0 1-6-6A19 19 0 0 1 2.5 4.2 2 2 0 0 1 4.5 2H7a2 2 0 0 1 2 1.7c.1 1 .3 2 .6 3a2 2 0 0 1-.5 2L8 9.7a16 16 0 0 0 6 6l1-1a2 2 0 0 1 2.1-.5c1 .3 2 .5 3 .6A2 2 0 0 1 22 17z"/></symbol>
       <symbol id="i-fb" viewBox="0 0 24 24"><path fill="currentColor" d="M22 12a10 10 0 1 0-11.6 9.9V14.9H7.9V12h2.5V9.8c0-2.5 1.5-3.9 3.8-3.9 1.1 0 2.2.2 2.2.2v2.5h-1.3c-1.2 0-1.6.8-1.6 1.6V12h2.8l-.5 2.9h-2.3v7A10 10 0 0 0 22 12z"/></symbol>
       <symbol id="i-ig" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="5" fill="none" stroke="currentColor" stroke-width="1.8"/><circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="1.8"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></symbol>
       <symbol id="i-li" viewBox="0 0 24 24"><path fill="currentColor" d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14zM8.3 18.3v-8H5.7v8h2.6zM7 9.1a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3zm11.3 9.2v-4.4c0-2.4-1.3-3.5-3-3.5a2.6 2.6 0 0 0-2.4 1.3v-1.1H10.3v8h2.6v-4.4c0-1.2.6-1.9 1.6-1.9.9 0 1.4.6 1.4 1.9v4.4h2.4z"/></symbol>
@@ -40,6 +41,7 @@
             <li><a href="about.html">About</a></li>
             <li><a href="stories.html" class="is-active">Stories</a></li>
             <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="careers.html">Career</a></li>
             <li><a href="contact.html">Contact</a></li>
           </ul>
           <a href="donate.html" class="btn btn--donate main-nav__cta">
@@ -95,7 +97,7 @@
             <span class="story-card__arrow" aria-hidden="true"><svg><use href="#i-arrow"/></svg></span>
           </div>
           <div class="story-card__head">
-            <h3>YB, 32</h3>
+            <h3>YB</h3>
             <span class="story-card__loc"><svg class="story-card__pin"><use href="#i-pin"/></svg> Hassanabdal</span>
           </div>
           <span class="story-card__tag">Acute Psychosis</span>
@@ -120,7 +122,7 @@
             <span class="story-card__arrow" aria-hidden="true"><svg><use href="#i-arrow"/></svg></span>
           </div>
           <div class="story-card__head">
-            <h3>AB, 45</h3>
+            <h3>AB</h3>
             <span class="story-card__loc"><svg class="story-card__pin"><use href="#i-pin"/></svg> Doultala</span>
           </div>
           <span class="story-card__tag">Acute Psychosis</span>
@@ -145,7 +147,7 @@
             <span class="story-card__arrow" aria-hidden="true"><svg><use href="#i-arrow"/></svg></span>
           </div>
           <div class="story-card__head">
-            <h3>RK, 24</h3>
+            <h3>RK</h3>
             <span class="story-card__loc"><svg class="story-card__pin"><use href="#i-pin"/></svg> Fatehjang</span>
           </div>
           <span class="story-card__tag">Acute Psychosis</span>
@@ -185,6 +187,7 @@
           <li><a href="about.html">About</a></li>
           <li><a href="stories.html">Stories</a></li>
           <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="careers.html">Career</a></li>
           <li><a href="contact.html">Contact</a></li>
         </ul>
       </nav>
@@ -200,6 +203,182 @@
       <p class="site-footer__copy">© Copyright 2022, All Rights Reserved by NSF Pakistan.</p>
     </div>
   </footer>
+
+  <!-- ============================================================
+       DONATE MODAL — opens from any [data-donate-open] trigger
+       ============================================================ -->
+  <div class="donate-modal" id="donateModal" role="dialog" aria-modal="true" aria-labelledby="donateModalTitle" hidden>
+    <div class="donate-modal__backdrop" data-donate-close></div>
+    <div class="donate-modal__dialog" role="document">
+      <button class="donate-modal__close" type="button" aria-label="Close" data-donate-close>
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+          <path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" d="M6 6l12 12M18 6L6 18"/>
+        </svg>
+      </button>
+
+      <header class="donate-modal__header">
+        <p class="eyebrow">Support Our Mission</p>
+        <h2 class="donate-modal__title" id="donateModalTitle">Donate to Neuro Sciences Foundation</h2>
+        <p class="donate-modal__lead">Scan a QR code or use the bank details below. 100% of your donation supports free mental health care.</p>
+      </header>
+
+      <div class="donate-modal__grid">
+        <!-- General -->
+        <article class="donation-card donation-card--white">
+          <div class="donation-card__left">
+            <img class="donation-card__icon" src="Donate%20Page/Green.svg" alt="">
+            <h3 class="donation-card__title">General Donations</h3>
+            <p class="donation-card__desc">For therapy, medication, clinic operations, and crisis response.</p>
+            <img class="donation-card__qr" src="Assets%20Home%20page/Donation%20Page/General.png" alt="QR code for General Donations">
+          </div>
+          <div class="donation-card__right">
+            <div class="donation-card__row">
+              <div class="donation-card__field">
+                <span class="donation-card__label">ACCOUNT TITLE</span>
+                <span class="donation-card__value">NEURO-SCIENCES FOUNDATION PAKISTAN</span>
+              </div>
+              <div class="donation-card__field">
+                <span class="donation-card__label">ACCOUNT NUMBER</span>
+                <span class="donation-card__value">04200100001370</span>
+              </div>
+            </div>
+            <hr class="donation-card__rule">
+            <div class="donation-card__row">
+              <div class="donation-card__field donation-card__field--full">
+                <span class="donation-card__label">IBAN</span>
+                <span class="donation-card__value">PK24ASCM0004200100001370</span>
+              </div>
+            </div>
+            <hr class="donation-card__rule">
+            <div class="donation-card__row">
+              <div class="donation-card__field">
+                <span class="donation-card__label">BANK DETAILS</span>
+                <span class="donation-card__value">ASKARI BANK LTD DHA PHASE V BRANCH ISLAMABAD PAKISTAN (Branch Code 420)</span>
+              </div>
+              <div class="donation-card__field donation-card__field--swift">
+                <span class="donation-card__label">SWIFT:</span>
+                <span class="donation-card__value">ASCMPKKA</span>
+              </div>
+            </div>
+            <button class="donation-card__copy" type="button" data-copy='{"title":"NEURO-SCIENCES FOUNDATION PAKISTAN","account":"04200100001370","iban":"PK24ASCM0004200100001370","bank":"ASKARI BANK LTD DHA PHASE V BRANCH ISLAMABAD PAKISTAN (Branch Code 420)","swift":"ASCMPKKA"}'>
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" d="M9 9h10v12H9zM5 15V5h10"/></svg>
+              Copy Details
+            </button>
+          </div>
+        </article>
+
+        <!-- Zakat -->
+        <article class="donation-card donation-card--orange">
+          <div class="donation-card__left">
+            <img class="donation-card__icon" src="Donate%20Page/Black.svg" alt="">
+            <h3 class="donation-card__title">Zakat Donations</h3>
+            <p class="donation-card__desc">Fulfill your Zakat obligation. 100% distributed to eligible recipients for mental care.</p>
+            <img class="donation-card__qr" src="Assets%20Home%20page/Donation%20Page/zakat.png" alt="QR code for Zakat Donations">
+          </div>
+          <div class="donation-card__right">
+            <div class="donation-card__row">
+              <div class="donation-card__field">
+                <span class="donation-card__label">ACCOUNT TITLE</span>
+                <span class="donation-card__value">NEURO-SCIENCES FOUNDATION PAKISTAN</span>
+              </div>
+              <div class="donation-card__field">
+                <span class="donation-card__label">ACCOUNT NUMBER</span>
+                <span class="donation-card__value">04200100001381</span>
+              </div>
+            </div>
+            <hr class="donation-card__rule">
+            <div class="donation-card__row">
+              <div class="donation-card__field donation-card__field--full">
+                <span class="donation-card__label">IBAN</span>
+                <span class="donation-card__value">PK18ASCM0004200100001381</span>
+              </div>
+            </div>
+            <hr class="donation-card__rule">
+            <div class="donation-card__row">
+              <div class="donation-card__field">
+                <span class="donation-card__label">BANK DETAILS</span>
+                <span class="donation-card__value">ASKARI BANK LTD, DHA PHASE V BRANCH, ISLAMABAD (Branch Code 420)</span>
+              </div>
+              <div class="donation-card__field donation-card__field--swift">
+                <span class="donation-card__label">SWIFT:</span>
+                <span class="donation-card__value">ASCMPKKA</span>
+              </div>
+            </div>
+            <button class="donation-card__copy" type="button" data-copy='{"title":"NEURO-SCIENCES FOUNDATION PAKISTAN","account":"04200100001381","iban":"PK18ASCM0004200100001381","bank":"ASKARI BANK LTD, DHA PHASE V BRANCH, ISLAMABAD (Branch Code 420)","swift":"ASCMPKKA"}'>
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" d="M9 9h10v12H9zM5 15V5h10"/></svg>
+              Copy Details
+            </button>
+          </div>
+        </article>
+
+        <!-- Sadqat -->
+        <article class="donation-card donation-card--white">
+          <div class="donation-card__left">
+            <img class="donation-card__icon" src="Donate%20Page/Green.svg" alt="">
+            <h3 class="donation-card__title">Sadqat Donations</h3>
+            <p class="donation-card__desc">Ongoing charity (Sadqah Jariyah) — your gift provides continued mental health support.</p>
+            <img class="donation-card__qr" src="Assets%20Home%20page/Donation%20Page/Sadqat.png" alt="QR code for Sadqat Donations">
+          </div>
+          <div class="donation-card__right">
+            <div class="donation-card__row">
+              <div class="donation-card__field">
+                <span class="donation-card__label">ACCOUNT TITLE</span>
+                <span class="donation-card__value">NEURO-SCIENCES FOUNDATION PAKISTAN</span>
+              </div>
+              <div class="donation-card__field">
+                <span class="donation-card__label">ACCOUNT NUMBER</span>
+                <span class="donation-card__value">04200100001392</span>
+              </div>
+            </div>
+            <hr class="donation-card__rule">
+            <div class="donation-card__row">
+              <div class="donation-card__field donation-card__field--full">
+                <span class="donation-card__label">IBAN</span>
+                <span class="donation-card__value">PK12ASCM0004200100001392</span>
+              </div>
+            </div>
+            <hr class="donation-card__rule">
+            <div class="donation-card__row">
+              <div class="donation-card__field">
+                <span class="donation-card__label">BANK DETAILS</span>
+                <span class="donation-card__value">ASKARI BANK LTD, DHA PHASE V BRANCH, ISLAMABAD (Branch Code 420)</span>
+              </div>
+              <div class="donation-card__field donation-card__field--swift">
+                <span class="donation-card__label">SWIFT:</span>
+                <span class="donation-card__value">ASCMPKKA</span>
+              </div>
+            </div>
+            <button class="donation-card__copy" type="button" data-copy='{"title":"NEURO-SCIENCES FOUNDATION PAKISTAN","account":"04200100001392","iban":"PK12ASCM0004200100001392","bank":"ASKARI BANK LTD, DHA PHASE V BRANCH, ISLAMABAD (Branch Code 420)","swift":"ASCMPKKA"}'>
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" d="M9 9h10v12H9zM5 15V5h10"/></svg>
+              Copy Details
+            </button>
+          </div>
+        </article>
+      </div>
+
+      <footer class="donate-modal__contact">
+        <h4>Need help? Get in touch</h4>
+        <ul>
+          <li>
+            <span class="donate-modal__icon"><svg><use href="#i-pin"/></svg></span>
+            <div>
+              <strong>Visit Us</strong>
+              <p>H#25, St#35, G-14/4, G-14 &mdash; Islamabad</p>
+              <p>H#311, St#4, Gulraiz Phase 3 &mdash; Rawalpindi</p>
+            </div>
+          </li>
+          <li>
+            <span class="donate-modal__icon"><svg><use href="#i-phone"/></svg></span>
+            <div>
+              <strong>Call Us</strong>
+              <p><a href="tel:+925184445740">051-8444574</a>, <a href="tel:+923008991821">0300-8991821</a> &mdash; Islamabad</p>
+              <p><a href="tel:+925155092940">051-5509294</a>, <a href="tel:+923315355043">0331-5355043</a> &mdash; Rawalpindi</p>
+            </div>
+          </li>
+        </ul>
+      </footer>
+    </div>
+  </div>
 
   <script>
     /* ---------- Hamburger ---------- */
@@ -340,7 +519,7 @@
 
       const scrollContent = document.createElement('div');
       scrollContent.className = 'scroll-content';
-      const PIN_OUT = ['#scrollPopup'];
+      const PIN_OUT = ['#scrollPopup', '#donateModal'];
       const pinned = [];
       PIN_OUT.forEach((sel) => {
         const el = document.querySelector(sel);
@@ -443,6 +622,93 @@
         requestAnimationFrame(tick);
       }
       requestAnimationFrame(tick);
+    })();
+
+    /* ---------- Donate modal ---------- */
+    (function () {
+      const modal = document.getElementById('donateModal');
+      if (!modal) return;
+      const openers = document.querySelectorAll('[data-donate-open]');
+      const closers = modal.querySelectorAll('[data-donate-close]');
+      const titleEl = document.getElementById('donateModalTitle');
+      const leadEl  = modal.querySelector('.donate-modal__lead');
+      const defaultTitle = titleEl ? titleEl.textContent : '';
+      const defaultLead  = leadEl  ? leadEl.textContent  : '';
+      let lastFocus = null;
+
+      function open(e) {
+        if (e) e.preventDefault();
+        const trigger = e && e.currentTarget;
+        const amount = trigger && trigger.getAttribute('data-amount');
+        const isCustom = trigger && trigger.hasAttribute('data-custom');
+        if (titleEl) {
+          if (amount) {
+            titleEl.textContent = 'You are donating Rs ' + Number(amount).toLocaleString('en-US');
+          } else if (isCustom) {
+            titleEl.textContent = 'Donate Your Custom Amount';
+          } else {
+            titleEl.textContent = defaultTitle;
+          }
+        }
+        if (leadEl) {
+          if (amount) {
+            leadEl.textContent = 'Use any account below to complete your contribution. 100% of your donation supports free mental health care.';
+          } else if (isCustom) {
+            leadEl.textContent = 'Give any amount you choose. Use any account below — every contribution funds free mental health care.';
+          } else {
+            leadEl.textContent = defaultLead;
+          }
+        }
+        lastFocus = document.activeElement;
+        modal.hidden = false;
+        document.body.style.overflow = 'hidden';
+        requestAnimationFrame(() => modal.classList.add('is-open'));
+        const closeBtn = modal.querySelector('.donate-modal__close');
+        if (closeBtn) closeBtn.focus();
+      }
+      function close() {
+        modal.classList.remove('is-open');
+        document.body.style.overflow = '';
+        setTimeout(() => { modal.hidden = true; }, 220);
+        if (lastFocus && lastFocus.focus) lastFocus.focus();
+      }
+
+      openers.forEach(b => b.addEventListener('click', open));
+      closers.forEach(b => b.addEventListener('click', close));
+      document.addEventListener('keydown', e => {
+        if (e.key === 'Escape' && !modal.hidden) close();
+      });
+
+      /* Copy Details — mirrors the donate page behavior */
+      modal.querySelectorAll('.donation-card__copy').forEach((btn) => {
+        btn.addEventListener('click', () => {
+          let data = {};
+          try { data = JSON.parse(btn.getAttribute('data-copy') || '{}'); } catch (e) {}
+          const text = [
+            data.title  ? 'Account Title: '  + data.title   : null,
+            data.account? 'Account Number: ' + data.account : null,
+            data.iban   ? 'IBAN: '           + data.iban    : null,
+            data.bank   ? 'Bank: '           + data.bank    : null,
+            data.swift  ? 'SWIFT: '          + data.swift   : null
+          ].filter(Boolean).join('\n');
+          if (!text) return;
+          const flash = (msg) => {
+            const original = btn.innerHTML;
+            btn.textContent = msg;
+            setTimeout(() => { btn.innerHTML = original; }, 1500);
+          };
+          if (navigator.clipboard && navigator.clipboard.writeText) {
+            navigator.clipboard.writeText(text).then(() => flash('Copied!'));
+          } else {
+            const ta = document.createElement('textarea');
+            ta.value = text;
+            document.body.appendChild(ta);
+            ta.select();
+            try { document.execCommand('copy'); flash('Copied!'); } catch (e) {}
+            document.body.removeChild(ta);
+          }
+        });
+      });
     })();
   </script>
 </body>

@@ -60,6 +60,7 @@
           <li><a href="about.html">About</a></li>
           <li><a href="stories.html">Stories</a></li>
           <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="careers.html">Career</a></li>
           <li><a href="contact.html">Contact</a></li>
         </ul>
         <a href="donate.html" class="btn btn--donate main-nav__cta">
@@ -156,8 +157,13 @@
       </p>
 
       <div class="founder__grid">
-        <figure class="founder__photo">
-          <img src="Assets%20Home%20page/SHakil%20Jehangir%20Malik.png" alt="Dr. Shakil Jehangir Malik">
+        <figure class="founder__photo" data-founder-carousel>
+          <!-- Founder image carousel — replace these 4 slide srcs with the images to be provided -->
+          <img class="founder__slide is-active" src="Assets%20Home%20page/SHakil%20Jehangir%20Malik.png" alt="Dr. Shakil Jehangir Malik">
+          <img class="founder__slide" src="Assets%20Home%20page/SHakil%20Jehangir%20Malik.png" alt="Dr. Shakil Jehangir Malik">
+          <img class="founder__slide" src="Assets%20Home%20page/SHakil%20Jehangir%20Malik.png" alt="Dr. Shakil Jehangir Malik">
+          <img class="founder__slide" src="Assets%20Home%20page/SHakil%20Jehangir%20Malik.png" alt="Dr. Shakil Jehangir Malik">
+          <div class="founder__dots" aria-label="Founder photos"></div>
           <figcaption>
             <span class="founder__name">Dr. Shakil Jehangir Malik</span>
             <span class="founder__role">Founder</span>
@@ -166,20 +172,20 @@
 
         <div class="founder__cards">
           <article class="info-card">
-            <h3 class="info-card__title">Experience in over 40 years</h3>
-            <p>Decades of trusted clinical expertise</p>
+            <h3 class="info-card__title">40+ Years of Experience</h3>
+            <p>Over four decades of trusted, hands-on clinical expertise in neuro-psychiatry</p>
           </article>
 
           <article class="info-card">
-            <h3 class="info-card__title">Organizational Credibility</h3>
-            <p>Registered NGO in Pakistan with annual audited reports</p>
+            <h3 class="info-card__title">Registered Since 2019</h3>
+            <p>A registered NGO in Pakistan since 2019, with annual audited reports</p>
           </article>
 
           <article class="info-card info-card--feature">
             <h3 class="info-card__title">Built on Expertise. Driven by Compassion.</h3>
             <p>Built on expertise and driven by compassion, the Neuro Sciences Foundation delivers transparent, people-centered mental health care in Pakistan.</p>
-            <a href="about.html" class="btn btn--white-pill">
-              About NSF
+            <a href="founder.html" class="btn btn--white-pill">
+              About Founder
               <svg class="btn__icon"><use href="#i-arrow"/></svg>
             </a>
           </article>
@@ -277,7 +283,7 @@
               <span class="stat__label">Patients treated since founding</span>
             </li>
             <li>
-              <span class="stat__num">25+</span>
+              <span class="stat__num">5+</span>
               <span class="stat__label">Clinics across Pakistan</span>
             </li>
             <li>
@@ -321,7 +327,7 @@
             </span>
           </div>
           <div class="story-card__head">
-            <h3>YB, 32</h3>
+            <h3>YB</h3>
             <span class="story-card__loc">
               <svg class="story-card__pin"><use href="#i-pin"/></svg>
               Hassanabdal
@@ -352,7 +358,7 @@
             </span>
           </div>
           <div class="story-card__head">
-            <h3>AB, 45</h3>
+            <h3>AB</h3>
             <span class="story-card__loc">
               <svg class="story-card__pin"><use href="#i-pin"/></svg>
               Doultala
@@ -383,7 +389,7 @@
             </span>
           </div>
           <div class="story-card__head">
-            <h3>RK, 24</h3>
+            <h3>RK</h3>
             <span class="story-card__loc">
               <svg class="story-card__pin"><use href="#i-pin"/></svg>
               Fatehjang
@@ -900,6 +906,7 @@
           <li><a href="about.html">About</a></li>
           <li><a href="stories.html">Stories</a></li>
           <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="careers.html">Career</a></li>
           <li><a href="contact.html">Contact</a></li>
         </ul>
       </nav>
@@ -922,6 +929,43 @@
       this.setAttribute('aria-expanded', String(!open));
       document.querySelector('.main-nav').classList.toggle('is-open');
     });
+
+    /* ---------- Founder photo carousel (auto-fade + dots) ---------- */
+    (function () {
+      const frame = document.querySelector('[data-founder-carousel]');
+      if (!frame) return;
+      const slides = Array.from(frame.querySelectorAll('.founder__slide'));
+      const dotsWrap = frame.querySelector('.founder__dots');
+      if (slides.length < 2 || !dotsWrap) return;
+
+      let index = slides.findIndex((s) => s.classList.contains('is-active'));
+      if (index < 0) index = 0;
+
+      const dots = slides.map((_, i) => {
+        const b = document.createElement('button');
+        b.type = 'button';
+        b.className = 'founder__dot' + (i === index ? ' is-active' : '');
+        b.setAttribute('aria-label', 'Show founder photo ' + (i + 1));
+        b.addEventListener('click', () => { show(i); restart(); });
+        dotsWrap.appendChild(b);
+        return b;
+      });
+
+      function show(i) {
+        slides[index].classList.remove('is-active');
+        dots[index].classList.remove('is-active');
+        index = (i + slides.length) % slides.length;
+        slides[index].classList.add('is-active');
+        dots[index].classList.add('is-active');
+      }
+
+      let timer = null;
+      function restart() {
+        if (timer) clearInterval(timer);
+        timer = setInterval(() => show(index + 1), 4500);
+      }
+      restart();
+    })();
 
     /* ---------- Mobile: hide nav on scroll down, show on scroll up ---------- */
     (function () {
@@ -1975,7 +2019,7 @@
         </a>
       </div>
       <div class="scroll-popup__media">
-        <img src="POpup%20image.png" alt="Community in rural Pakistan">
+        <img src="Popup%20image%202.png" alt="Community in rural Pakistan">
       </div>
     </div>
   </div>
@@ -2264,15 +2308,36 @@
         next.disabled = page === pages;
       }
 
-      prev.addEventListener('click', () => { page = Math.max(1, page - 1); render(); });
-      next.addEventListener('click', () => {
-        const per = perPage();
-        const pages = Math.max(1, Math.ceil(posts.length / per));
-        page = Math.min(pages, page + 1);
-        render();
-      });
+      const pageCount = () => Math.max(1, Math.ceil(posts.length / perPage()));
+
+      prev.addEventListener('click', () => { page = Math.max(1, page - 1); render(); resetAuto(); });
+      next.addEventListener('click', () => { page = Math.min(pageCount(), page + 1); render(); resetAuto(); });
       window.addEventListener('resize', render);
+
+      /* ---- Auto-advance: slides right-to-left, 3s pause between slides ---- */
+      const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      const DELAY = 3000;
+      let timer = null;
+      function advance() {
+        page = page >= pageCount() ? 1 : page + 1;   // loop back to the start
+        render();
+      }
+      function startAuto() { if (!reduce && !timer) timer = setInterval(advance, DELAY); }
+      function stopAuto()  { if (timer) { clearInterval(timer); timer = null; } }
+      function resetAuto() { stopAuto(); startAuto(); }
+
+      // Pause on hover, and when the tab is not visible
+      const viewport = track.closest('.social-posts__viewport') || track.parentElement;
+      if (viewport) {
+        viewport.addEventListener('mouseenter', stopAuto);
+        viewport.addEventListener('mouseleave', startAuto);
+      }
+      document.addEventListener('visibilitychange', () => {
+        if (document.hidden) stopAuto(); else startAuto();
+      });
+
       render();
+      startAuto();
     })();
 
     /* ---------- Scroll-triggered donate popup (≥20% page scroll) ---------- */
